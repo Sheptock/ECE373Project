@@ -1,9 +1,10 @@
 
-public class Boss {
+public class Boss extends Person{
 	private Reward reward;
 	private int difficulty;
 	private String rarity;
-	public Person person;
+	public Ability ability;
+	
 
 	public Reward getReward() {
 		return this.reward;
@@ -17,8 +18,8 @@ public class Boss {
 		return this.rarity;
 	}
 
-	public Person getPerson() {
-		return this.person;
+	public Ability getAbility() {
+		return this.ability;
 	}
 
 	public void setReward(Reward reward) {
@@ -33,8 +34,8 @@ public class Boss {
 		this.rarity = rarity;
 	}
 
-	public void setPerson(Person person) {
-		this.person = person;
+	public void setPerson(Ability abil) {
+		this.ability = abil;
 	}
 
 }

@@ -1,5 +1,5 @@
 
-public class Champion {
+public class Champion extends Person {
 	private int experience;
 	private String rarity;
 	private Equipment equipment;

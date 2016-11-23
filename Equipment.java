@@ -4,7 +4,8 @@ public class Equipment {
 	private int rarity;
 	private Champion champion;
 	private int bonusXP;
-	private invalid bonusGold;
+	private int bonusGold;
+	private String Icon;
 
 	public String getName() {
 		return this.name;
@@ -22,10 +23,14 @@ public class Equipment {
 		return this.bonusXP;
 	}
 
-	public invalid getBonusGold() {
+	public int getBonusGold() {
 		return this.bonusGold;
 	}
 
+	public String getIcon() {
+		return this.Icon;
+	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -42,8 +47,12 @@ public class Equipment {
 		this.bonusXP = bonusXP;
 	}
 
-	public void setBonusGold(invalid bonusGold) {
+	public void setBonusGold(int bonusGold) {
 		this.bonusGold = bonusGold;
+	}
+	
+	public void setIcon(String Icon) {
+		this.Icon = Icon;
 	}
 
 }
