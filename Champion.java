@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 
 public class Champion extends Person {
 	private int experience;
 	private String rarity;
-	private Equipment equipment;
-	private Ability abilities;
+	private ArrayList <Equipment> equipment;
+	private ArrayList<Ability> abilities;
 	private Mission currentMission;
 	private boolean unlocked;
 	public Person person;
@@ -16,11 +17,11 @@ public class Champion extends Person {
 		return this.rarity;
 	}
 
-	public Equipment getEquipment() {
+	public ArrayList<Equipment> getEquipment() {
 		return this.equipment;
 	}
 
-	public Ability getAbilities() {
+	public ArrayList<Ability> getAbilities() {
 		return this.abilities;
 	}
 
@@ -44,7 +45,7 @@ public class Champion extends Person {
 		this.rarity = rarity;
 	}
 
-	public void setEquipment(Equipment equipment) {
+	public void setEquipment(ArrayList<Equipment> equipment) {
 		this.equipment = equipment;
 	}
 
@@ -69,10 +70,11 @@ public class Champion extends Person {
 	}
 
 	public void addEquipment(Equipment equipment  ) {
-		// TODO should be implemented
+		this.equipment.add(equipment);
 	}
 
 	public boolean checkSlotAvailable( ) {
+		return unlocked;
 		// TODO should be implemented
 	}
 }

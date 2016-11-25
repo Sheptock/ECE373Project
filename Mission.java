@@ -93,10 +93,20 @@ public class Mission {
 	}
 
 	public int calculateMissionSuccessChance(Person p1, Person p2, Person p3  ) {
-		// TODO should be implemented
+		Boss tempBoss = (Boss) p1;
+		tempBoss.getAbility();
+		return -1;
 	}
 
 	public boolean missionOutcome( ) {
-		// TODO should be implemented
+		double number = Math.random();
+		
+		if(this.completeChance < number) {
+			return true;
+		}
+		
+		else {
+			return false;
+		}
 	}
 }
