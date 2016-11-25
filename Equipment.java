@@ -5,6 +5,8 @@ public class Equipment {
 	private Champion champion;
 	private int bonusXP;
 	private int bonusGold;
+	private String Icon;
+
 
 	public String getName() {
 		return this.name;
@@ -26,6 +28,10 @@ public class Equipment {
 		return this.bonusGold;
 	}
 
+	public String getIcon() {
+		return this.Icon;
+	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -44,6 +50,10 @@ public class Equipment {
 
 	public void setBonusGold(int bonusGold) {
 		this.bonusGold = bonusGold;
+	}
+	
+	public void setIcon(String Icon) {
+		this.Icon = Icon;
 	}
 
 }

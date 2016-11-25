@@ -1,5 +1,5 @@
 
-public class Troop {
+public class Troop extends Person{
 	private int usesRemaining;
 	private int successBoost;
 	public Person person;

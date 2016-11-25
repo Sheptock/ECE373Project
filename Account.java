@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //Testing Commit
 
 public class Account {
@@ -12,6 +14,8 @@ public class Account {
 	private int level;
 	private Equipment equipments;
 	private Equipment stash;
+	private ArrayList<Reward> rewards;
+	private int resources;
 
 	public Champion getChampions() {
 		return this.champions;
@@ -55,6 +59,14 @@ public class Account {
 
 	public Equipment getStash() {
 		return this.stash;
+	}
+	
+	public ArrayList<Reward> getRewards(){
+		return this.rewards;
+	}
+	
+	public int getResources(){
+		return this.resources;
 	}
 
 	public void setChampions(Champion champions) {
@@ -100,16 +112,27 @@ public class Account {
 	public void setStash(Equipment stash) {
 		this.stash = stash;
 	}
+	
+	public void setRewards(ArrayList<Reward> rewards){
+		this.rewards = rewards;
+	}
+	
+	public void setResources(int res){
+		this.resources = res;
+	}
 
 	public boolean login(String name, String pw  ) {
+		return false;
+
 		// TODO should be implemented
 	}
 
-	public void addXP(int xp  ) {
+	public void addXP(int xp) {
 		// TODO should be implemented
 	}
 
-	public boolean checkLvlUp(int exp  ) {
+	public boolean checkLvlUp(int exp) {
+		return false;
 		// TODO should be implemented
 	}
 }

@@ -3,7 +3,12 @@ public class Reward {
 	private int bonusXP;
 	private Equipment bonusResources;
 	private Equipment bonusEquipment;
+	private String Icon;
 
+	public String getIcon() {
+		return this.Icon;
+	}
+	
 	public int getBonusXP() {
 		return this.bonusXP;
 	}
@@ -28,6 +33,10 @@ public class Reward {
 		this.bonusEquipment = bonusEquipment;
 	}
 
+	public void setIcon(String Icon) {
+		this.Icon = Icon;
+	}
+	
 	public void giveAcctReward(Account acc  ) {
 		// TODO should be implemented
 	}
