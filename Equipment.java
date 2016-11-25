@@ -4,7 +4,7 @@ public class Equipment {
 	private int rarity;
 	private Champion champion;
 	private int bonusXP;
-	private invalid bonusGold;
+	private int bonusGold;
 
 	public String getName() {
 		return this.name;
@@ -22,7 +22,7 @@ public class Equipment {
 		return this.bonusXP;
 	}
 
-	public invalid getBonusGold() {
+	public int getBonusGold() {
 		return this.bonusGold;
 	}
 
@@ -42,7 +42,7 @@ public class Equipment {
 		this.bonusXP = bonusXP;
 	}
 
-	public void setBonusGold(invalid bonusGold) {
+	public void setBonusGold(int bonusGold) {
 		this.bonusGold = bonusGold;
 	}
 

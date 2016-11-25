@@ -101,7 +101,7 @@ public class Account {
 		this.stash = stash;
 	}
 
-	public boolean login(String name String pw  ) {
+	public boolean login(String name, String pw  ) {
 		// TODO should be implemented
 	}
 
