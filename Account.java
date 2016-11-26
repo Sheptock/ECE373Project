@@ -13,8 +13,20 @@ public class Account {
 	private ArrayList<Equipment> equipments;
 	private ArrayList<Equipment> stash;
 	private ArrayList<Reward> rewards;
+	private ArrayList<Ability> abilities;
 	private int resources;
 
+	public Account() {
+		//Create all of the things used in the game
+		createAbilities();
+		createChampions();
+		createEquipment();
+		createMissions();
+		createTroops();
+		createRewards();
+		createBosses();
+	}
+	
 	public ArrayList<Champion> getChampions() {
 		return this.champions;
 	}
@@ -57,6 +69,10 @@ public class Account {
 	
 	public int getResources(){
 		return this.resources;
+	}
+	
+	public ArrayList<Ability> getAbilities() {
+		return this.abilities;
 	}
 
 	public void setChampions(Champion champions) {
@@ -107,5 +123,48 @@ public class Account {
 		return false;
 
 		// TODO should be implemented
+	}
+	
+	public void createAbilities() {
+		Ability a0 = new Ability();
+		a0.setName("Slam");
+		Ability a1 = new Ability();
+		a1.setName("Cleave");
+		Ability a2 = new Ability();
+		a2.setName("Slash");
+		Ability a3 = new Ability();
+		a3.setName("Wild Strike");
+		Ability a4 = new Ability();
+		a4.setName("Execute");
+		Ability a5 = new Ability();
+		a5.setName("Stormstrike");
+		Ability a6 = new Ability();
+		a6.setName("Lava Lash");
+		Ability a7 = new Ability();
+		a7.setName("Windfury");
+		Ability a8 = new Ability();
+		a8.setName("Earthshock");
+		Ability a9 = new Ability();
+		a9.setName("Rampage");
+		
+		this.abilities.add(a0);
+		this.abilities.add(a1);
+		this.abilities.add(a2);
+		this.abilities.add(a3);
+		this.abilities.add(a4);
+		this.abilities.add(a5);
+		this.abilities.add(a6);
+		this.abilities.add(a7);
+		this.abilities.add(a8);
+		this.abilities.add(a9);
+		
+	}
+	
+	public void createChampions(){
+		Champion c0 = new Champion();
+		c0.setName("Barbarian");
+		c0.setLevel(100);
+		c0.setAbilities(this.getAbilities().get(0),this.getAbilities.get(1));
+		
 	}
 }

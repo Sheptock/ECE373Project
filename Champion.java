@@ -11,7 +11,6 @@ public class Champion extends Person {
 		return this.experience;
 	}
 
-
 	public ArrayList<Equipment> getEquipment() {
 		return this.equipment;
 	}
@@ -37,8 +36,9 @@ public class Champion extends Person {
 		this.equipment = equipment;
 	}
 
-	public void setAbilities(Ability abilities) {
-		this.abilities = abilities;
+	public void setAbilities(Ability ability0, Ability ability1) {
+		this.abilities.add(ability0);
+		this.abilities.add(ability1);
 	}
 
 	public void setCurrentMission(Mission currentMission) {
