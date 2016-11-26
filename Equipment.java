@@ -1,7 +1,6 @@
 
 public class Equipment {
 	private String name;
-	private int rarity;
 	private Champion champion;
 	private int bonusXP;
 	private int bonusGold;
@@ -10,10 +9,6 @@ public class Equipment {
 
 	public String getName() {
 		return this.name;
-	}
-
-	public int getRarity() {
-		return this.rarity;
 	}
 
 	public Champion getChampion() {
@@ -34,10 +29,6 @@ public class Equipment {
 	
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public void setRarity(int rarity) {
-		this.rarity = rarity;
 	}
 
 	public void setChampion(Champion champion) {

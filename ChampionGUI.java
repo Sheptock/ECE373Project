@@ -27,7 +27,21 @@ public class ChampionGUI() extends JPanel implements ActionListener {
 
 
 public void actionPerformed(ActionEvent e){
-	
-	
+		
 	//Equip items onto champions.
+	//Call the function equipItemOnChampion
+}
+
+public boolean equipItemOnChampion (Champion c, Equipment e){
+	
+	if(c.checkSlotAvailable == true) {
+		c.addEquipment(e);
+		e.setChampion(c);
+		return true;
+	}
+	
+	else {
+		return false;
+	}
+	
 }

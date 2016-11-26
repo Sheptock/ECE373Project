@@ -2,20 +2,15 @@ import java.util.ArrayList;
 
 public class Champion extends Person {
 	private int experience;
-	private String rarity;
 	private ArrayList <Equipment> equipment;
 	private ArrayList<Ability> abilities;
 	private Mission currentMission;
-	private boolean unlocked;
 	public Person person;
 
 	public int getExperience() {
 		return this.experience;
 	}
 
-	public String getRarity() {
-		return this.rarity;
-	}
 
 	public ArrayList<Equipment> getEquipment() {
 		return this.equipment;
@@ -29,9 +24,6 @@ public class Champion extends Person {
 		return this.currentMission;
 	}
 
-	public boolean getUnlocked() {
-		return this.unlocked;
-	}
 
 	public Person getPerson() {
 		return this.person;
@@ -40,11 +32,7 @@ public class Champion extends Person {
 	public void setExperience(int experience) {
 		this.experience = experience;
 	}
-
-	public void setRarity(String rarity) {
-		this.rarity = rarity;
-	}
-
+	
 	public void setEquipment(ArrayList<Equipment> equipment) {
 		this.equipment = equipment;
 	}
@@ -57,10 +45,6 @@ public class Champion extends Person {
 		this.currentMission = currentMission;
 	}
 
-	public void setUnlocked(boolean unlocked) {
-		this.unlocked = unlocked;
-	}
-
 	public void setPerson(Person person) {
 		this.person = person;
 	}
@@ -70,11 +54,20 @@ public class Champion extends Person {
 	}
 
 	public void addEquipment(Equipment equipment  ) {
-		this.equipment.add(equipment);
+		if(this.getEquipment.size() != 2){
+			this.equipment.add(equipment);
+		}
 	}
 
+	//returns true if slot is available, max of 2 slots.
 	public boolean checkSlotAvailable( ) {
-		return unlocked;
+		if(this.getEquipment.size() == 2){
+			return false;
+		}
+		
+		else {
+			return true;
+		}
 		// TODO should be implemented
 	}
 }

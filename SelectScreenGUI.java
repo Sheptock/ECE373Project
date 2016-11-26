@@ -17,14 +17,14 @@ public class SelectScreenGUI() extends JPanel implements ActionListener {
 
 }
 
- private static void createAndShowGUI() {
+ private static void createGUI() {
  
         //Create and set up the window.
-        JFrame frame = new JFrame("ButtonDemo");
+        JFrame frame = new JFrame("Select Screen");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  
         //Create and set up the content pane.
-        ButtonDemo newContentPane = new ButtonDemo();
+        SelectScreenGUI newContentPane = new SelectScreenGUI();
         newContentPane.setOpaque(true); //content panes must be opaque
         frame.setContentPane(newContentPane);
  
@@ -37,7 +37,10 @@ public class SelectScreenGUI() extends JPanel implements ActionListener {
 
 public void actionPerformed(ActionEvent e){
 	if("missonScreen".equals(e.getActionCommand())){
-		
+		//Create a missonScreen
+	}
+	else{
+		//create a championScreen
 	}
 }
 
