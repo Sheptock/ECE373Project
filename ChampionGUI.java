@@ -11,7 +11,7 @@ public class ChampionGUI() extends JPanel implements ActionListener {
  private static void createGUI() {
  
         //Create and set up the window.
-        JFrame frame = new JFrame("Select Screen");
+        JFrame frame = new JFrame("Champions");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  
         //Create and set up the content pane.
