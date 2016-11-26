@@ -1,3 +1,6 @@
+package org.game.hardware;
+
+import org.game.people.*;
 
 public class Equipment {
 	private String name;
