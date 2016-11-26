@@ -3,25 +3,23 @@ import java.util.ArrayList;
 //Testing Commit
 
 public class Account {
-	private Champion champions;
-	private Troop troops;
+	private ArrayList<Champion> champions;
+	private ArrayList<Troop> troops;
 	private String username;
 	private String password;
-	private Mission missions;
+	private ArrayList<Mission> missions;
 	private Mission availableMissions;
 	private Boss bosses;
-	private int experience;
-	private int level;
-	private Equipment equipments;
-	private Equipment stash;
+	private ArrayList<Equipment> equipments;
+	private ArrayList<Equipment> stash;
 	private ArrayList<Reward> rewards;
 	private int resources;
 
-	public Champion getChampions() {
+	public ArrayList<Champion> getChampions() {
 		return this.champions;
 	}
 
-	public Troop getTroops() {
+	public ArrayList<Troop> getTroops() {
 		return this.troops;
 	}
 
@@ -33,7 +31,7 @@ public class Account {
 		return this.password;
 	}
 
-	public Mission getMissions() {
+	public ArrayList<Mission> getMissions() {
 		return this.missions;
 	}
 
@@ -43,14 +41,6 @@ public class Account {
 
 	public Boss getBosses() {
 		return this.bosses;
-	}
-
-	public int getExperience() {
-		return this.experience;
-	}
-
-	public int getLevel() {
-		return this.level;
 	}
 
 	public Equipment getEquipments() {
@@ -85,11 +75,11 @@ public class Account {
 		this.password = password;
 	}
 
-	public void setMissions(Mission missions) {
+	public void setMissions(ArrayList<Mission> missions) {
 		this.missions = missions;
 	}
 
-	public void setAvailableMissions(Mission availableMissions) {
+	public void setAvailableMissions(ArrayList<Mission> availableMissions) {
 		this.availableMissions = availableMissions;
 	}
 
@@ -97,19 +87,11 @@ public class Account {
 		this.bosses = bosses;
 	}
 
-	public void setExperience(int experience) {
-		this.experience = experience;
-	}
-
-	public void setLevel(int level) {
-		this.level = level;
-	}
-
-	public void setEquipments(Equipment equipments) {
+	public void setEquipments(ArrayList<Equipment> equipments) {
 		this.equipments = equipments;
 	}
 
-	public void setStash(Equipment stash) {
+	public void setStash(ArrayList<Equipment> stash) {
 		this.stash = stash;
 	}
 	
@@ -124,15 +106,6 @@ public class Account {
 	public boolean login(String name, String pw  ) {
 		return false;
 
-		// TODO should be implemented
-	}
-
-	public void addXP(int xp) {
-		// TODO should be implemented
-	}
-
-	public boolean checkLvlUp(int exp) {
-		return false;
 		// TODO should be implemented
 	}
 }
