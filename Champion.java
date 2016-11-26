@@ -1,4 +1,8 @@
+package org.game.people;
+
 import java.util.ArrayList;
+import org.game.hardware.*;
+import org.game.software.*;
 
 public class Champion extends Person {
 	private int experience;
@@ -38,7 +42,7 @@ public class Champion extends Person {
 	}
 
 	public void setAbilities(Ability abilities) {
-		this.abilities = abilities;
+		this.abilities.add(abilities);
 	}
 
 	public void setCurrentMission(Mission currentMission) {
@@ -52,16 +56,16 @@ public class Champion extends Person {
 	public void assignMission(Mission mission  ) {
 		// TODO should be implemented
 	}
-
+	
 	public void addEquipment(Equipment equipment  ) {
-		if(this.getEquipment.size() != 2){
+		if(this.getEquipment().size() != 2){
 			this.equipment.add(equipment);
 		}
 	}
 
 	//returns true if slot is available, max of 2 slots.
 	public boolean checkSlotAvailable( ) {
-		if(this.getEquipment.size() == 2){
+		if(this.getEquipment().size() == 2){
 			return false;
 		}
 		

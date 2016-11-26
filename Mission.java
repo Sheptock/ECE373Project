@@ -1,4 +1,8 @@
+package org.game.software;
+
 import java.util.ArrayList;
+import org.game.people.*;
+import org.game.hardware.*;
 
 public class Mission {
 	private ArrayList<Person> heroSlots;

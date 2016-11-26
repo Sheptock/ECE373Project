@@ -1,4 +1,8 @@
+package org.game.software;
+
 import java.util.ArrayList;
+import org.game.people.*;
+import org.game.hardware.*;
 
 //Testing Commit
 
@@ -8,7 +12,7 @@ public class Account {
 	private String username;
 	private String password;
 	private ArrayList<Mission> missions;
-	private Mission availableMissions;
+	private ArrayList<Mission> availableMissions;
 	private Boss bosses;
 	private ArrayList<Equipment> equipments;
 	private ArrayList<Equipment> stash;
@@ -35,7 +39,7 @@ public class Account {
 		return this.missions;
 	}
 
-	public Mission getAvailableMissions() {
+	public ArrayList<Mission> getAvailableMissions() {
 		return this.availableMissions;
 	}
 
@@ -43,11 +47,11 @@ public class Account {
 		return this.bosses;
 	}
 
-	public Equipment getEquipments() {
+	public ArrayList<Equipment> getEquipments() {
 		return this.equipments;
 	}
 
-	public Equipment getStash() {
+	public ArrayList<Equipment> getStash() {
 		return this.stash;
 	}
 	
@@ -60,11 +64,11 @@ public class Account {
 	}
 
 	public void setChampions(Champion champions) {
-		this.champions = champions;
+		this.champions.add(champions);
 	}
 
 	public void setTroops(Troop troops) {
-		this.troops = troops;
+		this.troops.add(troops);
 	}
 
 	public void setUsername(String username) {
@@ -104,8 +108,10 @@ public class Account {
 	}
 
 	public boolean login(String name, String pw  ) {
-		return false;
-
-		// TODO should be implemented
+		if(username.equals(name) && password.equals(pw)) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

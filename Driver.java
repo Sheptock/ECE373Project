@@ -6,10 +6,10 @@ public class Driver {
 	public static void main(String[] args) {
 		Account account1 = new Account();
 		
-		account1.setUsername("jptomanibarra");
-		account1.setPassword("hunter2");
-		HOVGUI newGUI;
+		account1.setUsername("username");
+		account1.setPassword("password");
+		LoginGUI newGUI;
 		
-		newGUI = new HOVGUI("HOVGUI", account1);
+		newGUI = new LoginGUI("Welcome to the Halls of Valor!", account1);
 	}
 }
