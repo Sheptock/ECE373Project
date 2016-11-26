@@ -1,3 +1,4 @@
+package org.game.people;
 
 public class Troop extends Person{
 	private int usesRemaining;

@@ -1,3 +1,5 @@
+package org.game.software;
+
 
 public class Ability {
 	private String Name;

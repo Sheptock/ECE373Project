@@ -1,3 +1,6 @@
+package org.game.hardware;
+
+import org.game.software.*;
 
 public class Reward {
 	private int bonusXP;

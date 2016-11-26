@@ -1,10 +1,15 @@
-import java.util.ArrayList;
+package org.game.software;
 
-public class MissionSelectGUI() extends JPanel implements ActionListener {
+import java.util.ArrayList;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class MissionSelectGUI extends JPanel implements ActionListener {
 		
 	//Populate Missons
 
-}
+
 
  private static void createGUI() {
  
@@ -30,3 +35,4 @@ public void actionPerformed(ActionEvent e){
 	//Load a specific Misson Page Depending on what is selected.
 }
 
+}
