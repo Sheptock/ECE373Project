@@ -1,6 +1,10 @@
+package org.game.software;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
-public class SelectScreenGUI() extends JPanel implements ActionListener {
+import javax.swing.*;
+
+public class SelectScreen() extends JPanel implements ActionListener {
 		
 	JButton missonSelect = new JButton("Missons");
 	missonSelect.setVerticalTextPosition(AbstractButton.CENTER);
@@ -40,5 +44,3 @@ public void actionPerformed(ActionEvent e){
 		
 	}
 }
-
-public void 

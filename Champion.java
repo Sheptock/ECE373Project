@@ -9,7 +9,14 @@ public class Champion extends Person {
 	private ArrayList <Equipment> equipment;
 	private ArrayList<Ability> abilities;
 	private Mission currentMission;
-	public Person person;
+	// public Person person; <----- This doesn't make sense, I commented out the getter/setter for this
+	
+	public Champion(){
+		experience = 0;
+		equipment = new ArrayList <Equipment>();
+		abilities = new ArrayList<Ability>();
+		currentMission = new Mission();
+	}
 
 	public int getExperience() {
 		return this.experience;
@@ -26,12 +33,13 @@ public class Champion extends Person {
 	public Mission getCurrentMission() {
 		return this.currentMission;
 	}
-
-
+	
+	/*
 	public Person getPerson() {
 		return this.person;
 	}
-
+	*/
+	
 	public void setExperience(int experience) {
 		this.experience = experience;
 	}
@@ -41,25 +49,26 @@ public class Champion extends Person {
 	}
 
 	public void setAbilities(Ability ability0, Ability ability1) {
-		this.abilities.add(ability0);
-		this.abilities.add(ability1);
+		this.abilities.add(0, ability0);
+		this.abilities.add(1, ability1);
 	}
 
 	public void setCurrentMission(Mission currentMission) {
 		this.currentMission = currentMission;
 	}
-
+	
+	/*
 	public void setPerson(Person person) {
 		this.person = person;
 	}
-
-	public void assignMission(Mission mission  ) {
-		// TODO should be implemented
-	}
+	*/
 	
-	public void addEquipment(Equipment equipment  ) {
+	public void addEquipment(Equipment equipment) {
 		if(this.getEquipment().size() != 2){
 			this.equipment.add(equipment);
+		}
+		else{
+			//SOME KIND OF ERROR MESSAGE TO THE USER TELLING THEM NO
 		}
 	}
 
@@ -72,6 +81,5 @@ public class Champion extends Person {
 		else {
 			return true;
 		}
-		// TODO should be implemented
 	}
 }

@@ -1,16 +1,24 @@
+package org.game.software;
+import java.awt.*;
+import java.awt.event.*;
 import java.util.ArrayList;
+
+import javax.swing.*
+
+import org.game.hardware.Equipment;
+import org.game.people.Champion;
 
 public class ChampionGUI extends JPanel implements ActionListener {
 		
 	public ChampionGUI(Account a){
 		ArrayList<Champion> tempChampions = a.getChampions();	
 		//Populate Champions 6 total
-		Jlabel champion0 = new JLabel(tempChampions.get(0).getName())
-		Jlabel champion1 = new JLabel(tempChampions.get(1).getName())
-		Jlabel champion2 = new JLabel(tempChampions.get(2).getName())
-		Jlabel champion3 = new JLabel(tempChampions.get(3).getName())
-		Jlabel champion4 = new JLabel(tempChampions.get(4).getName())
-		Jlabel champion5 = new JLabel(tempChampions.get(5).getName())
+		JLabel champion0 = new JLabel(tempChampions.get(0).getName())
+		JLabel champion1 = new JLabel(tempChampions.get(1).getName())
+		JLabel champion2 = new JLabel(tempChampions.get(2).getName())
+		JLabel champion3 = new JLabel(tempChampions.get(3).getName())
+		JLabel champion4 = new JLabel(tempChampions.get(4).getName())
+		JLabel champion5 = new JLabel(tempChampions.get(5).getName())
 	
 		add(champion0);
 		add(champion1);
