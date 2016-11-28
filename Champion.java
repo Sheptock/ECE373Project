@@ -1,11 +1,12 @@
-package org.game.people;
+
 
 import java.util.ArrayList;
-import org.game.hardware.*;
-import org.game.software.*;
 
-public class Champion extends Person {
+
+public class Champion {
 	private int experience;
+	private String name;
+	private int level;
 	private ArrayList <Equipment> equipment;
 	private ArrayList<Ability> abilities;
 	private Mission currentMission;
@@ -81,5 +82,21 @@ public class Champion extends Person {
 		else {
 			return true;
 		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
 	}
 }

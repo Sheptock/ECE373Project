@@ -1,6 +1,4 @@
-package org.game.people;
 
-import org.game.software.*;
 public class Person {
 	private String name;
 	private int level;

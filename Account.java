@@ -1,19 +1,18 @@
-package org.game.software;
+
 
 import java.util.ArrayList;
-import org.game.people.*;
-import org.game.hardware.*;
+
 
 //Testing Commit
 
 public class Account {
 	private ArrayList<Champion> champions;
-	private ArrayList<Troop> troops;
+
 	private String username;
 	private String password;
 	private ArrayList<Mission> missions;
 	private ArrayList<Mission> availableMissions;
-	private ArrayList<Boss> bosses;
+
 	private ArrayList<Equipment> equipments;
 	private ArrayList<Equipment> stash;
 	private ArrayList<Reward> rewards;
@@ -22,23 +21,21 @@ public class Account {
 
 	public Account() {
 		//Create all of the things used in the game
-		promptCreateUserPass; //The prompt to create the user name and password?
+		//promptCreateUserPass; //The prompt to create the user name and password?
 		createAbilities();
 		createChampions();
 		createEquipment();
-		createMissions();
-		createTroops();
 		createRewards();
-		createBosses();
+		createMissions();
+
+		
+
 	}
 	
 	public ArrayList<Champion> getChampions() {
 		return this.champions;
 	}
 
-	public ArrayList<Troop> getTroops() {
-		return this.troops;
-	}
 
 	public String getUsername() {
 		return this.username;
@@ -54,10 +51,6 @@ public class Account {
 
 	public ArrayList<Mission> getAvailableMissions() {
 		return this.availableMissions;
-	}
-
-	public ArrayList<Boss> getBosses() {
-		return this.bosses;
 	}
 
 	public ArrayList<Equipment> getEquipments() {
@@ -84,10 +77,6 @@ public class Account {
 		this.champions.add(champions);
 	}
 
-	public void setTroops(Troop troops) {
-		this.troops.add(troops);
-	}
-
 	public void setUsername(String username) {
 		this.username = username;
 	}
@@ -102,10 +91,6 @@ public class Account {
 
 	public void setAvailableMissions(ArrayList<Mission> availableMissions) {
 		this.availableMissions = availableMissions;
-	}
-
-	public void setBosses(ArrayList<Boss> bosses) {
-		this.bosses = bosses;
 	}
 
 	public void setEquipments(ArrayList<Equipment> equipments) {
@@ -259,6 +244,17 @@ public class Account {
 		c9.setName("Druid");
 		c9.setLevel(100);
 		c9.setAbilities(abilityList.get(18), abilityList.get(19));
+	
+		this.champions.add(c0);
+		this.champions.add(c1);
+		this.champions.add(c2);
+		this.champions.add(c3);
+		this.champions.add(c4);
+		this.champions.add(c5);
+		this.champions.add(c6);
+		this.champions.add(c7);
+		this.champions.add(c8);
+		this.champions.add(c9);
 		
 	}
 	
@@ -269,7 +265,87 @@ public class Account {
 		 * Swift Boots
 		 * Potion
 		 */
+		
+		Equipment e0 = new Equipment();
+		e0.setBonusChance(0.1);
+		e0.setBonusXP(0);
+		e0.setName("Shield");
+		
+		Equipment e1 = new Equipment();
+		e1.setBonusChance(0.1);
+		e1.setBonusXP(10);
+		e1.setName("Mace");
+		
+		Equipment e2 = new Equipment();
+		e2.setBonusChance(0.2);
+		e2.setBonusXP(0);
+		e2.setName("Helmet");
+		
+		Equipment e3 = new Equipment();
+		e3.setBonusChance(0);
+		e3.setBonusXP(20);
+		e3.setName("Dagger");
+		
+		Equipment e4 = new Equipment();
+		e4.setBonusChance(0.05);
+		e4.setBonusXP(25);
+		e4.setName("Axe");
+		
+		
 	}
+	
+	public void createRewards(){
+		//List of ideas:
+		/*
+		 * well, just
+		 * extra xp, resources, or equipment
+		 */
+		
+		Reward r0 = new Reward();
+		r0.setBonusEquipment(this.getEquipments().get(0));
+		r0.setBonusResources(0);
+		r0.setBonusXP(0);
+		
+		Reward r1 = new Reward();
+		r1.setBonusEquipment(this.getEquipments().get(1));
+		r1.setBonusResources(0);
+		r1.setBonusXP(0);
+		
+		Reward r2 = new Reward();
+		r2.setBonusEquipment(this.getEquipments().get(2));
+		r2.setBonusResources(0);
+		r2.setBonusXP(0);
+		
+		Reward r3 = new Reward();
+		r3.setBonusEquipment(this.getEquipments().get(3));
+		r3.setBonusResources(0);
+		r3.setBonusXP(0);
+		
+		Reward r4 = new Reward();
+		r4.setBonusEquipment(this.getEquipments().get(4));
+		r4.setBonusResources(0);
+		r4.setBonusXP(0);
+		
+		Reward r5 = new Reward();
+		r5.setBonusEquipment(null);
+		r5.setBonusResources(10);
+		r5.setBonusXP(0);
+		
+		Reward r6 = new Reward();
+		r6.setBonusEquipment(null);
+		r6.setBonusResources(0);
+		r6.setBonusXP(50);
+		
+		this.rewards.add(r0);
+		this.rewards.add(r1);
+		this.rewards.add(r2);
+		this.rewards.add(r3);
+		this.rewards.add(r4);
+		this.rewards.add(r5);
+		this.rewards.add(r6);
+		
+	}
+	
 	
 	public void createMissions(){
 		//List of ideas:
@@ -280,31 +356,21 @@ public class Account {
 		 * Defend from the Attack
 		 * Secret Orders
 		 */
+		
+		//Assassination
+		Mission m0 = new Mission();
+		m0.setReward(this.getRewards().get(0));
+		m0.setDescription("This is a mission");
+		m0.setLevel(100);
+		m0.setXp(200);
+		m0.setResourceCost(50);
+		m0.setName("Assassination");
 	}
 	
-	public void createTroops(){
-		//List of ideas:
-		/*
-		 * Soldier
-		 * Guardian
-		 * Knight
-		 * Guard
-		 */
-	}
+
 	
-	public void createRewards(){
-		//List of ideas:
-		/*
-		 * well, just
-		 * extra xp, resources, or equipment
-		 */
-	}
+
 	
-	public void createBosses(){
-		//List of ideas:
-		/*
-		 * 
-		 */
-	}
+
 	
 }

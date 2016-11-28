@@ -1,12 +1,10 @@
-package org.game.hardware;
 
-import org.game.people.*;
 
 public class Equipment {
 	private String name;
 	private Champion champion;
 	private int bonusXP;
-	private int bonusGold;
+	private double bonusChance; //increased chance to complete mission between 0-1
 	private String Icon;
 
 
@@ -20,10 +18,6 @@ public class Equipment {
 
 	public int getBonusXP() {
 		return this.bonusXP;
-	}
-
-	public int getBonusGold() {
-		return this.bonusGold;
 	}
 
 	public String getIcon() {
@@ -42,12 +36,17 @@ public class Equipment {
 		this.bonusXP = bonusXP;
 	}
 
-	public void setBonusGold(int bonusGold) {
-		this.bonusGold = bonusGold;
-	}
 	
 	public void setIcon(String Icon) {
 		this.Icon = Icon;
+	}
+
+	public double getBonusChance() {
+		return bonusChance;
+	}
+
+	public void setBonusChance(double bonusChance) {
+		this.bonusChance = bonusChance;
 	}
 
 }

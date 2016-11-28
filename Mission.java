@@ -1,29 +1,23 @@
-package org.game.software;
+
 
 import java.util.ArrayList;
-import org.game.people.*;
-import org.game.hardware.*;
+
 
 public class Mission {
-	private ArrayList<Person> heroSlots;
-	private ArrayList<Boss> bossSlots;
+	private ArrayList<Champion> heroSlots;
+
 	private Reward reward;
 	private int resourceCost;
 	private int level;
 	private int xp;
 	private String name;
-	private int missionTime;
 	private float completeChance;
 	private String description;
 
-	public ArrayList<Person> getHeroSlots() {
+	public ArrayList<Champion> getHeroSlots() {
 		return this.heroSlots;
 	}
 
-	public ArrayList<Boss> getBossSlots() {
-		return this.bossSlots;
-	}
-	
 	public Reward getReward() {
 		return this.reward;
 	}
@@ -44,10 +38,6 @@ public class Mission {
 		return this.name;
 	}
 
-	public int getMissionTime() {
-		return this.missionTime;
-	}
-
 	public float getCompleteChance() {
 		return this.completeChance;
 	}
@@ -56,14 +46,10 @@ public class Mission {
 		return this.description;
 	}
 
-	public void setHeroSlots(ArrayList<Person> heroSlots) {
+	public void setHeroSlots(ArrayList<Champion> heroSlots) {
 		this.heroSlots = heroSlots;
 	}
 	
-	public void setbossSlots(ArrayList<Boss> bossSlots) {
-		this.bossSlots = bossSlots;
-	}
-
 	public void setReward(Reward reward) {
 		this.reward = reward;
 	}
@@ -84,10 +70,6 @@ public class Mission {
 		this.name = name;
 	}
 
-	public void setMissionTime(int missionTime) {
-		this.missionTime = missionTime;
-	}
-
 	public void setCompleteChance(float completeChance) {
 		this.completeChance = completeChance;
 	}
@@ -96,9 +78,8 @@ public class Mission {
 		this.description = description;
 	}
 
-	public int calculateMissionSuccessChance(Person p1, Person p2, Person p3  ) {
-		Boss tempBoss = (Boss) p1;
-		tempBoss.getAbility();
+	public int calculateMissionSuccessChance(Champion p1, Champion p2, Champion p3  ) {
+	
 		return -1;
 	}
 

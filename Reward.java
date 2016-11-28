@@ -1,10 +1,8 @@
-package org.game.hardware;
 
-import org.game.software.*;
 
 public class Reward {
 	private int bonusXP;
-	private Equipment bonusResources;
+	private int bonusResources;
 	private Equipment bonusEquipment;
 	private String Icon;
 
@@ -16,7 +14,7 @@ public class Reward {
 		return this.bonusXP;
 	}
 
-	public Equipment getBonusResources() {
+	public int getBonusResources() {
 		return this.bonusResources;
 	}
 
@@ -28,7 +26,7 @@ public class Reward {
 		this.bonusXP = bonusXP;
 	}
 
-	public void setBonusResources(Equipment bonusResources) {
+	public void setBonusResources(int bonusResources) {
 		this.bonusResources = bonusResources;
 	}
 

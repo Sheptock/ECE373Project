@@ -1,7 +1,4 @@
-package org.game.people;
 
-import org.game.hardware.*;
-import org.game.software.*;
 
 public class Boss extends Person{
 	private Reward reward;
