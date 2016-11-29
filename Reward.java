@@ -1,5 +1,3 @@
-
-
 public class Reward {
 	private int bonusXP;
 	private int bonusResources;

@@ -1,14 +1,14 @@
-package org.game.software;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
 
-public class SelectScreen() extends JPanel implements ActionListener {
+public class SelectScreen extends JPanel implements ActionListener {
 		
-	JButton missonSelect = new JButton("Missons");
-	missonSelect.setVerticalTextPosition(AbstractButton.CENTER);
-	missonSelect.setActionCommand("missonScreen");
+	JButton missionSelect = new JButton("Missions");
+	missionSelect.setVerticalTextPosition(AbstractButton.CENTER);
+	missionSelect.setActionCommand("missionScreen");
 	
 	JButton championSelect = new JButton("Champions");
 	championSelect.setVerticalTextPosition(AbstractButton.CENTER);
@@ -16,7 +16,7 @@ public class SelectScreen() extends JPanel implements ActionListener {
 	
 	missonSelect.addActionListener(this);
 	championSelect.addActionListener(this);
-	add(missonSelect);
+	add(missionSelect);
 	add(championSelect);
 
 }

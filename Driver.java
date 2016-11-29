@@ -1,6 +1,3 @@
-package org.game.software;
-
-import org.game.*;
 
 public class Driver {
 	public static void main(String[] args) {

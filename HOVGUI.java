@@ -1,5 +1,3 @@
-package org.game.software;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -19,7 +17,6 @@ public class HOVGUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 //		buildGUI();
-		
 		
 		
 		setVisible(true);
