@@ -10,10 +10,11 @@ public class Champion {
 	private ArrayList <Equipment> equipment;
 	private ArrayList<Ability> abilities;
 	private Mission currentMission;
-	// public Person person; <----- This doesn't make sense, I commented out the getter/setter for this
 	
 	public Champion(){
 		experience = 0;
+		name = "name";
+		level = 100;
 		equipment = new ArrayList <Equipment>();
 		abilities = new ArrayList<Ability>();
 		currentMission = new Mission();
