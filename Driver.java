@@ -1,4 +1,5 @@
 
+
 public class Driver {
 	public static void main(String[] args) {
 		Account account1 = new Account();
@@ -8,5 +9,8 @@ public class Driver {
 		LoginGUI newGUI;
 		
 		newGUI = new LoginGUI("Welcome to the Halls of Valor!", account1);
+		
+		SelectScreenGUI selectScreen = new SelectScreenGUI();
+		selectScreen.createGUI();
 	}
 }

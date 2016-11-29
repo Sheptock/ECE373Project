@@ -7,6 +7,13 @@ public class Equipment {
 	private double bonusChance; //increased chance to complete mission between 0-1
 	private String Icon;
 
+	public Equipment() {
+		name = "name";
+		champion = null;
+		bonusXP = 0;
+		bonusChance = 0;
+		Icon = "Blank";
+	}
 
 	public String getName() {
 		return this.name;

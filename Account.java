@@ -17,6 +17,17 @@ public class Account {
 	public Account() {
 		//Create all of the things used in the game
 		//promptCreateUserPass; //The prompt to create the user name and password?
+		username = "username";
+		password = "password";
+		champions = new ArrayList<Champion>();
+		missions = new ArrayList<Mission>();
+		availableMissions = new ArrayList<Mission>();
+		equipments = new ArrayList<Equipment>();
+		stash = new ArrayList<Equipment>();
+		rewards = new ArrayList<Reward>();
+		abilities = new ArrayList<Ability>();
+		resources = 100;
+		
 		createAbilities();
 		createChampions();
 		createEquipment();
@@ -113,6 +124,7 @@ public class Account {
 		//Warrior
 		Ability a0 = new Ability();
 		a0.setName("Heroic Strike");
+		a0.setIcon("null");
 		Ability a1 = new Ability();
 		a1.setName("Execute");
 		//Paladin
@@ -282,6 +294,12 @@ public class Account {
 		e4.setBonusChance(0.05);
 		e4.setBonusXP(25);
 		e4.setName("Axe");
+		
+		this.equipments.add(e0);
+		this.equipments.add(e1);
+		this.equipments.add(e2);
+		this.equipments.add(e3);
+		this.equipments.add(e4);
 		
 		
 	}

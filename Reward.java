@@ -4,6 +4,13 @@ public class Reward {
 	private Equipment bonusEquipment;
 	private String Icon;
 
+	public Reward() {
+		bonusXP = 0;
+		bonusResources = 0;
+		bonusEquipment = null;
+		Icon = "Blank";
+	}
+	
 	public String getIcon() {
 		return this.Icon;
 	}

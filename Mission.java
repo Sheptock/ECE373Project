@@ -9,9 +9,21 @@ public class Mission {
 	private int level;
 	private int xp;
 	private String name;
-	private float completeChance;
+	private double completeChance;
 	private String description;
 
+	public Mission() {
+		heroSlots = new ArrayList<Champion>();
+		reward = null;
+		resourceCost = 0;
+		level = 0;
+		xp = 0;
+		name = "Blank";
+		completeChance = 0.0;
+		description = "Blank";
+	
+	}
+	
 	public ArrayList<Champion> getHeroSlots() {
 		return this.heroSlots;
 	}
@@ -36,7 +48,7 @@ public class Mission {
 		return this.name;
 	}
 
-	public float getCompleteChance() {
+	public double getCompleteChance() {
 		return this.completeChance;
 	}
 
@@ -68,7 +80,7 @@ public class Mission {
 		this.name = name;
 	}
 
-	public void setCompleteChance(float completeChance) {
+	public void setCompleteChance(double completeChance) {
 		this.completeChance = completeChance;
 	}
 

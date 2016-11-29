@@ -5,6 +5,11 @@ public class Ability {
 	private String Name;
 	private String Icon;
 
+	public Ability () {
+		Name = "Blank";
+		Icon = "Blank";
+	}
+	
 	public String getName() {
 		return this.Name;
 	}

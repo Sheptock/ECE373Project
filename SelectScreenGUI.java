@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +22,7 @@ public class SelectScreenGUI extends JPanel implements ActionListener {
 
 	}
 
-	 private static void createGUI() {
+	 public static void createGUI() {
 	 
 	        //Create and set up the window.
 	        JFrame frame = new JFrame("Select Screen");
