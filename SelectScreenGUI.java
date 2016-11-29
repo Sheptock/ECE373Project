@@ -28,7 +28,7 @@ public class SelectScreenGUI extends JPanel implements ActionListener {
 	 
 	        //Create and set up the window.
 	        JFrame frame = new JFrame("Select Screen");
-	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    
 	 
 	        //Create and set up the content pane.
 	        SelectScreenGUI newContentPane = new SelectScreenGUI(this.account);
@@ -44,7 +44,7 @@ public class SelectScreenGUI extends JPanel implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e){
 		if("missonScreen".equals(e.getActionCommand())){
-			MissionSelectGUI missionSelect = new MissionSelectGUI();
+			MissionSelectGUI missionSelect = new MissionSelectGUI(this.account);
 			missionSelect.createGUI();
 		}
 		else{

@@ -57,7 +57,7 @@ public class ChampionGUI extends JPanel implements ActionListener {
  
         //Create and set up the window.
         JFrame frame = new JFrame("Champions");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
  
        frame.add(new ChampionGUI(a));
  

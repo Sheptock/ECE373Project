@@ -366,15 +366,90 @@ public class Account {
 		 * Defend from the Attack
 		 * Secret Orders
 		 */
+		//Arraylist of abilities
+		ArrayList<Ability> as0 = new ArrayList<Ability>();
+		as0.add(this.abilities.get(0));
+		as0.add(this.abilities.get(1));
+		
+		ArrayList<Ability> as1 = new ArrayList<Ability>();
+		as1.add(this.abilities.get(4));
+		as1.add(this.abilities.get(7));
+		as1.add(this.abilities.get(5));
+		as1.add(this.abilities.get(1));
+		as1.add(this.abilities.get(6));
+		as1.add(this.abilities.get(9));
+		
+		ArrayList<Ability> as2 = new ArrayList<Ability>();
+		as2.add(this.abilities.get(0));
+		as2.add(this.abilities.get(1));
+		as2.add(this.abilities.get(2));
+		as2.add(this.abilities.get(3));
+		
+		ArrayList<Ability> as3 = new ArrayList<Ability>();
+		as3.add(this.abilities.get(5));
+		as3.add(this.abilities.get(7));
+		as3.add(this.abilities.get(8));
+		
+		
+		ArrayList<Ability> as4 = new ArrayList<Ability>();
+		as4.add(this.abilities.get(9));
+		as4.add(this.abilities.get(2));
+		as4.add(this.abilities.get(3));
+		as4.add(this.abilities.get(8));
+		as4.add(this.abilities.get(6));
+		
 		
 		//Assassination
 		Mission m0 = new Mission();
 		m0.setReward(this.getRewards().get(0));
-		m0.setDescription("This is a mission");
+		m0.setDescription("Invade the cave and kill Agnidox and Erethon.");
 		m0.setLevel(100);
 		m0.setXp(200);
 		m0.setResourceCost(50);
 		m0.setName("Assassination");
+		m0.setAbilities(as0);
+		
+		Mission m1 = new Mission();
+		m1.setReward(this.getRewards().get(1));
+		m1.setDescription("Travel to the top of the mountain and slay Ember, Bone Warlock, and Sven");
+		m1.setLevel(100);
+		m1.setXp(200);
+		m1.setResourceCost(50);
+		m1.setName("The Broken Blade");
+		m1.setAbilities(as1);
+		
+		Mission m2 = new Mission();
+		m2.setReward(this.getRewards().get(2));
+		m2.setDescription("Rescue Deckard Cain from the hands of Iron Juggernaut and The Watcher");
+		m2.setLevel(100);
+		m2.setXp(200);
+		m2.setResourceCost(50);
+		m2.setName("The Legacy of Cain");
+		m2.setAbilities(as2);
+		
+		Mission m3 = new Mission();
+		m3.setReward(this.getRewards().get(3));
+		m3.setDescription("Protect the king near the Old Cathedral.");
+		m3.setLevel(100);
+		m3.setXp(200);
+		m3.setResourceCost(50);
+		m3.setName("Joffery Must Not Fall");
+		m3.setAbilities(as3);
+		
+		Mission m4 = new Mission();
+		m4.setReward(this.getRewards().get(4));
+		m4.setDescription("Free the Imprisoned Angel and escort him back to town.");
+		m4.setLevel(100);
+		m4.setXp(200);
+		m4.setResourceCost(50);
+		m4.setName("Imprisoned Angel");
+		m4.setAbilities(as4);
+		
+		this.missions.add(m0);
+		this.missions.add(m1);
+		this.missions.add(m2);
+		this.missions.add(m3);
+		this.missions.add(m4);
 		
 		
 	}
