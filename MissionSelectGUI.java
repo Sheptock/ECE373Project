@@ -10,7 +10,7 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 
 
 
- private static void createGUI() {
+ public static void createGUI() {
  
         //Create and set up the window.
         JFrame frame = new JFrame("Mission Select");

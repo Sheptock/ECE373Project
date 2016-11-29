@@ -42,7 +42,8 @@ public class SelectScreenGUI extends JPanel implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e){
 		if("missonScreen".equals(e.getActionCommand())){
-			//Create a missonScreen
+			MissionSelectGUI missionSelect = new MissionSelectGUI();
+			missionSelect.createGUI();
 		}
 		else{
 			//create a championScreen
