@@ -1,9 +1,4 @@
-
-
 import java.util.ArrayList;
-
-
-//Testing Commit
 
 public class Account {
 	private ArrayList<Champion> champions;
@@ -28,15 +23,11 @@ public class Account {
 		createRewards();
 		createMissions();
 		resources = 500;
-
-		
-
 	}
 	
 	public ArrayList<Champion> getChampions() {
 		return this.champions;
 	}
-
 
 	public String getUsername() {
 		return this.username;
@@ -198,52 +189,52 @@ public class Account {
 		
 		Champion c0 = new Champion();
 		c0.setName("Warrior");
-		c0.setLevel(100);
+		c0.setLevel(1);
 		c0.setAbilities(abilityList.get(0), abilityList.get(1));
 		
 		Champion c1 = new Champion();
 		c1.setName("Paladin");
-		c1.setLevel(100);
+		c1.setLevel(1);
 		c1.setAbilities(abilityList.get(2), abilityList.get(3));
 		
 		Champion c2 = new Champion();
 		c2.setName("Hunter");
-		c2.setLevel(100);
+		c2.setLevel(1);
 		c2.setAbilities(abilityList.get(4), abilityList.get(5));
 		
 		Champion c3 = new Champion();
 		c3.setName("Rogue");
-		c3.setLevel(100);
+		c3.setLevel(1);
 		c3.setAbilities(abilityList.get(6), abilityList.get(7));
 		
 		Champion c4 = new Champion();
 		c4.setName("Priest");
-		c4.setLevel(100);
+		c4.setLevel(1);
 		c4.setAbilities(abilityList.get(8), abilityList.get(9));
 		
 		Champion c5 = new Champion();
 		c5.setName("Shaman");
-		c5.setLevel(100);
+		c5.setLevel(1);
 		c5.setAbilities(abilityList.get(10), abilityList.get(11));
 		
 		Champion c6 = new Champion();
 		c6.setName("Mage");
-		c6.setLevel(100);
+		c6.setLevel(1);
 		c6.setAbilities(abilityList.get(12), abilityList.get(13));
 		
 		Champion c7 = new Champion();
 		c7.setName("Warlock");
-		c7.setLevel(100);
+		c7.setLevel(1);
 		c7.setAbilities(abilityList.get(14), abilityList.get(15));
 		
 		Champion c8 = new Champion();
 		c8.setName("Monk");
-		c8.setLevel(100);
+		c8.setLevel(1);
 		c8.setAbilities(abilityList.get(16), abilityList.get(17));
 		
 		Champion c9 = new Champion();
 		c9.setName("Druid");
-		c9.setLevel(100);
+		c9.setLevel(1);
 		c9.setAbilities(abilityList.get(18), abilityList.get(19));
 	
 		this.champions.add(c0);
@@ -366,6 +357,8 @@ public class Account {
 		m0.setXp(200);
 		m0.setResourceCost(50);
 		m0.setName("Assassination");
+		
+		
 	}
 	
 
