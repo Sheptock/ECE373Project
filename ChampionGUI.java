@@ -5,8 +5,6 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
-
-
 public class ChampionGUI extends JPanel implements ActionListener {
 		
 	public ChampionGUI(Account a){

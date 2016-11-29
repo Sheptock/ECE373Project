@@ -38,6 +38,7 @@ public class Account {
 		createEquipment();
 		createRewards();
 		createMissions();
+		resources = 500;
 
 		
 

@@ -6,20 +6,22 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 public class SelectScreen extends JPanel implements ActionListener {
+
 	
 	public SelectScreen() {
+
 		
-	JButton missonSelect = new JButton("Missons");
-	missonSelect.setVerticalTextPosition(AbstractButton.CENTER);
-	missonSelect.setActionCommand("missonScreen");
+	JButton missionSelect = new JButton("Missions");
+	missionSelect.setVerticalTextPosition(AbstractButton.CENTER);
+	missionSelect.setActionCommand("missionScreen");
 	
 	JButton championSelect = new JButton("Champions");
 	championSelect.setVerticalTextPosition(AbstractButton.CENTER);
 	championSelect.setActionCommand("championScreen");
 	
-	missonSelect.addActionListener(this);
+	missionSelect.addActionListener(this);
 	championSelect.addActionListener(this);
-	add(missonSelect);
+	add(missionSelect);
 	add(championSelect);
 
 	}
