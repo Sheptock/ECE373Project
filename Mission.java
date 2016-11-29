@@ -5,6 +5,7 @@ public class Mission {
 	private ArrayList<Champion> heroSlots;
 
 	private Reward reward;
+	private ArrayList<Ability> abilities;
 	private int resourceCost;
 	private int level;
 	private int xp;
@@ -14,6 +15,7 @@ public class Mission {
 
 	public Mission() {
 		heroSlots = new ArrayList<Champion>();
+		abilities = new ArrayList<Ability>();
 		reward = null;
 		resourceCost = 0;
 		level = 0;
@@ -103,5 +105,13 @@ public class Mission {
 		else {
 			return false;
 		}
+	}
+
+	public ArrayList<Ability> getAbilities() {
+		return abilities;
+	}
+
+	public void setAbilities(ArrayList<Ability> abilities) {
+		this.abilities = abilities;
 	}
 }

@@ -66,6 +66,15 @@ public class ChampionGUI extends JPanel implements ActionListener {
 		//JComboBox<String> 
 		
         JFrame frame = new JFrame("Champions");
+<<<<<<< HEAD
+=======
+
+ 
+       frame.add(new ChampionGUI(a));
+ 
+        //Display the window.
+        frame.pack();
+>>>>>>> eee4b3019376ffc0c978060ed3ecb29774269e4a
         frame.setVisible(true);
         frame.setSize(500, 100);
         frame.setLayout(new FlowLayout());
