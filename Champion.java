@@ -100,4 +100,15 @@ public class Champion {
 	public void setLevel(int level) {
 		this.level = level;
 	}
+	
+	public void checkLevelGain(){
+		if(experience >= 100*level){
+			experience = experience - 100*level;
+			++level;
+			checkLevelGain();
+		}
+		else{
+			return;
+		}
+	}
 }
