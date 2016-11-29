@@ -5,8 +5,10 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class SelectScreenGUI extends JPanel implements ActionListener {
+	Account account;
 	
-	public SelectScreenGUI() {
+	public SelectScreenGUI(Account a) {
+		this.account = a;
 		JButton missonSelect = new JButton("Missons");
 		missonSelect.setVerticalTextPosition(AbstractButton.CENTER);
 		missonSelect.setActionCommand("missonScreen");
@@ -22,14 +24,14 @@ public class SelectScreenGUI extends JPanel implements ActionListener {
 
 	}
 
-	 public static void createGUI() {
+	 public void createGUI() {
 	 
 	        //Create and set up the window.
 	        JFrame frame = new JFrame("Select Screen");
 	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	 
 	        //Create and set up the content pane.
-	        SelectScreenGUI newContentPane = new SelectScreenGUI();
+	        SelectScreenGUI newContentPane = new SelectScreenGUI(this.account);
 	        newContentPane.setOpaque(true); //content panes must be opaque
 	        frame.setContentPane(newContentPane);
 	 
@@ -46,7 +48,9 @@ public class SelectScreenGUI extends JPanel implements ActionListener {
 			missionSelect.createGUI();
 		}
 		else{
-			//create a championScreen
+			ChampionGUI championGUI = new ChampionGUI(this.account);
+			championGUI.createGUI(this.account);
+			
 		}
 	}
 }

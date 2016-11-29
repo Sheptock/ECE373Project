@@ -16,6 +16,10 @@ public class ChampionGUI extends JPanel implements ActionListener {
 		JLabel champion3 = new JLabel(tempChampions.get(3).getName());
 		JLabel champion4 = new JLabel(tempChampions.get(4).getName());
 		JLabel champion5 = new JLabel(tempChampions.get(5).getName());
+		JLabel champion6 = new JLabel(tempChampions.get(6).getName());
+		JLabel champion7 = new JLabel(tempChampions.get(7).getName());
+		JLabel champion8 = new JLabel(tempChampions.get(8).getName());
+		JLabel champion9 = new JLabel(tempChampions.get(9).getName());
 	
 		add(champion0);
 		add(champion1);
@@ -23,6 +27,10 @@ public class ChampionGUI extends JPanel implements ActionListener {
 		add(champion3);
 		add(champion4);
 		add(champion5);
+		add(champion6);
+		add(champion7);
+		add(champion8);
+		add(champion9);
 		
 		
 	
@@ -45,7 +53,7 @@ public class ChampionGUI extends JPanel implements ActionListener {
 
 
 
-	private static void createGUI(Account a) {
+	public static void createGUI(Account a) {
  
         //Create and set up the window.
         JFrame frame = new JFrame("Champions");
