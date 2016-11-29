@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
@@ -34,7 +33,7 @@ public class SelectScreenGUI extends JPanel implements ActionListener {
 	        SelectScreenGUI newContentPane = new SelectScreenGUI(this.account);
 	        newContentPane.setOpaque(true); //content panes must be opaque
 	        frame.setContentPane(newContentPane);
-	 
+	        
 	        //Display the window.
 	        frame.pack();
 	        frame.setVisible(true);

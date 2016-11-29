@@ -42,7 +42,6 @@ public class Equipment {
 	public void setBonusXP(int bonusXP) {
 		this.bonusXP = bonusXP;
 	}
-
 	
 	public void setIcon(String Icon) {
 		this.Icon = Icon;
