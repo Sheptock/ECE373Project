@@ -13,7 +13,7 @@ public class MissionGUI extends JFrame {
 		mission = aMission;
 		setSize(500,500);
 		
-		add(new JLabel("<HTML><center>Mission</center></HTML>"));
+//		add(new JLabel("<HTML><center>Mission</center></HTML>"));
 //		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 //		image = new ImageIcon("src\\XP-icon.png");
@@ -23,36 +23,31 @@ public class MissionGUI extends JFrame {
 		
 //		add(imageLabel);
 		
-		buildGUI();
-	}
-	public MissionGUI(String windowTitle) {
-		super(windowTitle);
-		
-		setSize(500,500);
-		
-		add(new JLabel("<HTML><center>Mission</center></HTML>"));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		image = new ImageIcon("C:\\Users\\Owner\\Desktop\\halls_of_valor\\images\\reward-icon.png");
-		imageLabel = new JLabel(image);
-		imageLabel.setBounds(10, 10, 10, 10);
-		imageLabel.setVisible(true);
-		
-		add(imageLabel);
-
-		
 		setVisible(true);
 		
+		buildGUI();
 	}
 	
 	public void buildGUI() {
-		JPanel missionLevel = new JPanel();
+		JPanel missionLevel = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		missionLevel.setBounds(100, 100, 100, 100);
 		
+		missionLevel.add(new JLabel("Mission Level: "));
 		missionLevel.add(new JLabel(String.valueOf(mission.getLevel())));
+		missionLevel.setAlignmentX(LEFT_ALIGNMENT);
+		missionLevel.setAlignmentY(LEFT_ALIGNMENT);
 		missionLevel.setVisible(true);
 		
+		JPanel missionDescription = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		missionDescription.setBounds(10,10,10,10);
+		
+		missionDescription.add(new JLabel(mission.getDescription()));
+		missionDescription.setVisible(true);
+		
+		
 		add(missionLevel);
+		add(missionDescription);
 		
 		
 	}

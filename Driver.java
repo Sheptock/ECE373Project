@@ -6,6 +6,7 @@ public class Driver {
 		Mission mission1 = new Mission();
 		
 		mission1.setLevel(10);
+		mission1.setDescription("this is but a simple test description");
 		
 		account1.setUsername("username");
 		account1.setPassword("password");
