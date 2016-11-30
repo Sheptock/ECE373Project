@@ -1,20 +1,20 @@
-
+import javax.swing.ImageIcon;
 
 
 public class Ability {
 	private String Name;
-	private String Icon;
+	private ImageIcon Icon;
 
 	public Ability () {
 		Name = "Blank";
-		Icon = "Blank";
+	
 	}
 	
 	public String getName() {
 		return this.Name;
 	}
 
-	public String getIcon() {
+	public ImageIcon getIcon() {
 		return this.Icon;
 	}
 
@@ -22,7 +22,7 @@ public class Ability {
 		this.Name = Name;
 	}
 
-	public void setIcon(String Icon) {
+	public void setIcon(ImageIcon Icon) {
 		this.Icon = Icon;
 	}
 
