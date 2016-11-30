@@ -1,7 +1,6 @@
-//<<<<<<< HEAD
-//=======
+
 import java.util.concurrent.ThreadLocalRandom;
-//>>>>>>> eee4b3019376ffc0c978060ed3ecb29774269e4a
+
 import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +8,7 @@ import java.awt.event.*;
 	
 public class MissionSelectGUI extends JPanel implements ActionListener {
 		Account account;
-	//Populate Missons
+	//Populate Missions
 	public MissionSelectGUI(Account a ){
 		ArrayList<Mission> tempMissions = a.getMissions();
 		this.account = a;
@@ -83,7 +82,7 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 
 
  	public void actionPerformed(ActionEvent e){
-	//Load a specific Misson Page Depending on what is selected.
+	//Load a specific Mission Page Depending on what is selected.
  	
  		if("mission0".equals(e.getActionCommand())) {
  			//JACOB/NICK WHOEVER IS WRITING SPECIFIC MISSION GUI CALL THAT CODE HERE
