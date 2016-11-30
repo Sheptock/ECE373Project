@@ -8,11 +8,10 @@ import javax.swing.*;
 public class ChampionGUI extends JPanel implements ActionListener {
 	
 	private static JButton b0, b1, b2, b3, b4, b5, b6, b7, b8, b9;
+	public ArrayList<Champion> champs = new ArrayList<Champion>();
+	public ArrayList<Equipment> stash = new ArrayList<Equipment>();
 	
 	public ChampionGUI(Account a){
-		
-		ArrayList<Champion> champs = new ArrayList<Champion>();
-		ArrayList<Equipment> stash = new ArrayList<Equipment>();
 		
 		champs = a.getChampions();
 		stash = a.getStash();

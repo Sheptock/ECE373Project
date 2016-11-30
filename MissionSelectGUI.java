@@ -35,27 +35,27 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		add(mission0);
 		
 		ImageIcon image0 = new ImageIcon("src\\reward-icon.PNG");
-		image0.setToolTipText("XP:" + tempMissions.get(rand0).getReward().getBonusXP()+
-							  "Resources:" + tempMissions.get(rand0).getReward().getBonusResources()+
-							  "Equipment:" + tempMissions.get(rand0).getReward().getBonusEquipment().getName());
+		image0.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand0).getReward().getBonusXP())+
+							  "\n Resources:" + String.valueOf(tempMissions.get(rand0).getReward().getBonusResources())+
+							  "\n Equipment:" + tempMissions.get(rand0).getReward().getBonusEquipment().getName());
 		add(image0);
 		
 		JButton mission1 = new JButton(tempMissions.get(rand1).getName());
 		mission1.setActionCommand("mission1");
 		add(mission1);
 		
-		image1.setToolTipText("XP:" + tempMissions.get(rand1).getReward().getBonusXP()+
-							  "Resources:" + tempMissions.get(rand1).getReward().getBonusResources()+
-							  "Equipment:" + tempMissions.get(rand1).getReward().getBonusEquipment().getName());
+		image1.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand1).getReward().getBonusXP())+
+							  "\n Resources:" + String.valueOf(tempMissions.get(rand1).getReward().getBonusResources())+
+							  "\n Equipment:" + tempMissions.get(rand1).getReward().getBonusEquipment().getName());
 		add(image1);
 		
 		JButton mission2 = new JButton(tempMissions.get(rand2).getName());
 		mission2.setActionCommand("mission2");
 		add(mission2);
 		
-		image2.setToolTipText("XP:" + tempMissions.get(rand2).getReward().getBonusXP()+
-							  "Resources:" + tempMissions.get(rand2).getReward().getBonusResources()+
-							  "Equipment:" + tempMissions.get(rand2).getReward().getBonusEquipment().getName());
+		image2.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand2).getReward().getBonusXP())+
+							  "\n Resources:" + String.valueOf(tempMissions.get(rand2).getReward().getBonusResources())+
+							  "\n Equipment:" + tempMissions.get(rand2).getReward().getBonusEquipment().getName());
 		add(image2);
 		
 		
