@@ -124,7 +124,7 @@ public class Account {
 		//Warrior
 		Ability a0 = new Ability();
 		a0.setName("Heroic Strike");
-		a0.setIcon("null");
+//		a0.setIcon("null");
 		Ability a1 = new Ability();
 		a1.setName("Execute");
 		//Paladin

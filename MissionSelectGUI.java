@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
 import java.util.concurrent.ThreadLocalRandom;
->>>>>>> eee4b3019376ffc0c978060ed3ecb29774269e4a
+//>>>>>>> eee4b3019376ffc0c978060ed3ecb29774269e4a
 import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
