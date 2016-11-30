@@ -35,7 +35,7 @@ public class LoginGUI extends JFrame {
 //		panelButton.setBounds();
 		panelButton.setLayout(null);
 		panelButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-		loginButton.setBounds(200,200, 220, 30);
+		loginButton.setBounds(120, 200, 200, 30);
 		
 		
 		
