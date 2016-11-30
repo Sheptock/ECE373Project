@@ -29,6 +29,8 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		//Generate 3 random missions for the Mission Select Screen,
 		//There will always only be 3 missions available at a time.
 		
+		
+		
 		JButton mission0 = new JButton(tempMissions.get(rand0).getName());
 		mission0.setActionCommand("mission0");
 		add(mission0);
@@ -40,6 +42,8 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		JButton mission2 = new JButton(tempMissions.get(rand2).getName());
 		mission2.setActionCommand("mission2");
 		add(mission2);
+		
+		
 		
 	}
 
