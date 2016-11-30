@@ -1,18 +1,17 @@
-
+import javax.swing.ImageIcon;
 
 public class Equipment {
 	private String name;
 	private Champion champion;
 	private int bonusXP;
 	private double bonusChance; //increased chance to complete mission between 0-1
-	private String Icon;
+	private ImageIcon Icon;
 
 	public Equipment() {
 		name = "name";
 		champion = null;
 		bonusXP = 0;
 		bonusChance = 0;
-		Icon = "Blank";
 	}
 
 	public String getName() {
@@ -27,7 +26,7 @@ public class Equipment {
 		return this.bonusXP;
 	}
 
-	public String getIcon() {
+	public ImageIcon getIcon() {
 		return this.Icon;
 	}
 	
@@ -43,7 +42,7 @@ public class Equipment {
 		this.bonusXP = bonusXP;
 	}
 	
-	public void setIcon(String Icon) {
+	public void setIcon(ImageIcon Icon) {
 		this.Icon = Icon;
 	}
 

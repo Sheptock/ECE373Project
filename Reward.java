@@ -1,17 +1,19 @@
+import javax.swing.ImageIcon;
+
 public class Reward {
 	private int bonusXP;
 	private int bonusResources;
 	private Equipment bonusEquipment;
-	private String Icon;
+	private ImageIcon Icon;
 
 	public Reward() {
 		bonusXP = 0;
 		bonusResources = 0;
 		bonusEquipment = null;
-		Icon = "Blank";
+		Icon = new ImageIcon("/images/reward-icon.PNG");
 	}
 	
-	public String getIcon() {
+	public ImageIcon getIcon() {
 		return this.Icon;
 	}
 	
@@ -39,7 +41,7 @@ public class Reward {
 		this.bonusEquipment = bonusEquipment;
 	}
 
-	public void setIcon(String Icon) {
+	public void setIcon(ImageIcon Icon) {
 		this.Icon = Icon;
 	}
 	

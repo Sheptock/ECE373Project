@@ -17,7 +17,7 @@ public class LoginGUI extends JFrame {
 		setSize(500,500);
 		
 		add(new JLabel("<HTML><center>Welcome to the Halls of Valor!</center></HTML>", SwingConstants.CENTER));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		buildGUI();
 		
@@ -67,8 +67,9 @@ public class LoginGUI extends JFrame {
 			JOptionPane.showConfirmDialog(null, myPanel, "Login", JOptionPane.OK_CANCEL_OPTION);
 			
 			if(account.login(usernameField.getText(), passwordField.getText())) {
-				JOptionPane.showMessageDialog(null, "Success");
-				setVisible(false);
+				JOptionPane.showMessageDialog(null, "Logging in...");
+//				setVisible(false);
+				dispose();
 			} else {
 				JOptionPane.showMessageDialog(null, "Failure");
 			}
