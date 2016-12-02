@@ -36,12 +36,6 @@ public class Champion {
 		return this.currentMission;
 	}
 	
-	/*
-	public Person getPerson() {
-		return this.person;
-	}
-	*/
-	
 	public void setExperience(int experience) {
 		this.experience = experience;
 	}
@@ -59,18 +53,16 @@ public class Champion {
 		this.currentMission = currentMission;
 	}
 	
-	/*
-	public void setPerson(Person person) {
-		this.person = person;
-	}
-	*/
-	
 	public void addEquipment(Equipment equipment) {
-		if(this.getEquipment().size() != 2){
-			this.equipment.add(equipment);
+		this.equipment.add(equipment);
+	}
+	
+	public void unequip(int slot){
+		if (slot == 1){
+			this.equipment.remove(this.getEquipment().get(0));
 		}
-		else{
-			//SOME KIND OF ERROR MESSAGE TO THE USER TELLING THEM NO
+		else if (slot == 2){
+			this.equipment.remove(this.getEquipment().get(1));
 		}
 	}
 
