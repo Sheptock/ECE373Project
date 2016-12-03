@@ -21,6 +21,8 @@ public class ChampionGUI extends JPanel implements ActionListener {
 		equipment = a.getEquipments();
 		stash = a.getStash();
 		//stash = equipment;
+		champs.get(0).addEquipment(this.equipment.get(0));
+		champs.get(0).addEquipment(this.equipment.get(1));
 		
 		//CHAMP INFO
 		champName = new JLabel("Champion");
@@ -92,7 +94,7 @@ public class ChampionGUI extends JPanel implements ActionListener {
         setUnequip2 = new JButton("Unequip Slot 2");
         setUnequip2.setActionCommand("UnequipSlot2");
         setUnequip2.setLayout(null);
-        setUnequip2.setBounds(600, 350, 150, 30);
+        setUnequip2.setBounds(550, 350, 150, 30);
         setUnequip2.setVisible(false);
         
         //CHAMP BUTTONS
