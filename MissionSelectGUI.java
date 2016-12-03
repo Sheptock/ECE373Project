@@ -30,7 +30,7 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		
 		
 		
-		JButton mission0 = new JButton(tempMissions.get(rand0).getName());
+		JButton mission0 = new JButton(tempMissions.get(rand0).getName() + " \n" + "Level: " + String.valueOf(tempMissions.get(rand0).getLevel()));
 		mission0.setActionCommand("mission0");
 		add(mission0);
 		
@@ -49,7 +49,7 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		}
 		add(mission0_label);
 		
-		JButton mission1 = new JButton(tempMissions.get(rand1).getName());
+		JButton mission1 = new JButton(tempMissions.get(rand1).getName()+ " \n" + "Level: " + String.valueOf(tempMissions.get(rand1).getLevel()));
 		mission1.setActionCommand("mission1");
 		add(mission1);
 		
@@ -68,7 +68,7 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		}
 		add(mission1_label);
 		
-		JButton mission2 = new JButton(tempMissions.get(rand2).getName());
+		JButton mission2 = new JButton(tempMissions.get(rand2).getName()+ " \n" + "Level: " + String.valueOf(tempMissions.get(rand2).getLevel()));
 		mission2.setActionCommand("mission2");
 		add(mission2);
 		
