@@ -35,28 +35,58 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		add(mission0);
 		
 		ImageIcon image0 = new ImageIcon("src\\reward-icon.PNG");
-		image0.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand0).getReward().getBonusXP())+
+		JLabel mission0_label = new JLabel(image0);
+		if(tempMissions.get(rand0).getReward().getBonusEquipment()!= null){
+			mission0_label.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand0).getReward().getBonusXP())+
 							  "\n Resources:" + String.valueOf(tempMissions.get(rand0).getReward().getBonusResources())+
-							  "\n Equipment:" + tempMissions.get(rand0).getReward().getBonusEquipment().getName());
-		add(image0);
+							 "\n Equipment:" + tempMissions.get(rand0).getReward().getBonusEquipment().getName());
+		}
+		
+		else {
+			mission0_label.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand0).getReward().getBonusXP())+
+					  "\n Resources:" + String.valueOf(tempMissions.get(rand0).getReward().getBonusResources())+
+					 "\n Equipment: None");
+		}
+		add(mission0_label);
 		
 		JButton mission1 = new JButton(tempMissions.get(rand1).getName());
 		mission1.setActionCommand("mission1");
 		add(mission1);
 		
-		image1.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand1).getReward().getBonusXP())+
+		ImageIcon image1 = new ImageIcon("src\\reward-icon.PNG");
+		JLabel mission1_label = new JLabel(image1);
+		if(tempMissions.get(rand1).getReward().getBonusEquipment()!= null){
+			mission1_label.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand1).getReward().getBonusXP())+
 							  "\n Resources:" + String.valueOf(tempMissions.get(rand1).getReward().getBonusResources())+
 							  "\n Equipment:" + tempMissions.get(rand1).getReward().getBonusEquipment().getName());
-		add(image1);
+		}
+		
+		else {
+			mission1_label.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand1).getReward().getBonusXP())+
+					  "\n Resources:" + String.valueOf(tempMissions.get(rand1).getReward().getBonusResources())+
+					 "\n Equipment: None");
+		}
+		add(mission1_label);
 		
 		JButton mission2 = new JButton(tempMissions.get(rand2).getName());
 		mission2.setActionCommand("mission2");
 		add(mission2);
 		
-		image2.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand2).getReward().getBonusXP())+
-							  "\n Resources:" + String.valueOf(tempMissions.get(rand2).getReward().getBonusResources())+
-							  "\n Equipment:" + tempMissions.get(rand2).getReward().getBonusEquipment().getName());
-		add(image2);
+		ImageIcon image2 = new ImageIcon("src\\reward-icon.PNG");
+		JLabel mission2_label = new JLabel(image2);
+		if(tempMissions.get(rand2).getReward().getBonusEquipment()!= null){
+			mission2_label.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand2).getReward().getBonusXP())+
+				 "\n Resources:" + String.valueOf(tempMissions.get(rand2).getReward().getBonusResources())+
+				 "\n Equipment:" + tempMissions.get(rand2).getReward().getBonusEquipment().getName());
+		}
+		
+		else {
+			mission2_label.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand2).getReward().getBonusXP())+
+					  "\n Resources:" + String.valueOf(tempMissions.get(rand2).getReward().getBonusResources())+
+					 "\n Equipment: None");
+		}
+		
+		add(mission2_label);
 		
 		
 	}

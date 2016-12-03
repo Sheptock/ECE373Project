@@ -6,6 +6,7 @@ public class Mission {
 
 	private Reward reward;
 	private ArrayList<Ability> abilities;
+	private boolean completed;
 	private int resourceCost;
 	private int level;
 	private int xp;
@@ -17,6 +18,7 @@ public class Mission {
 		heroSlots = new ArrayList<Champion>();
 		abilities = new ArrayList<Ability>();
 		reward = null;
+		completed = false;
 		resourceCost = 0;
 		level = 0;
 		xp = 0;
@@ -113,5 +115,13 @@ public class Mission {
 
 	public void setAbilities(ArrayList<Ability> abilities) {
 		this.abilities = abilities;
+	}
+
+	public boolean isCompleted() {
+		return completed;
+	}
+
+	public void setCompleted(boolean completed) {
+		this.completed = completed;
 	}
 }

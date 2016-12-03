@@ -399,6 +399,22 @@ public class Account {
 		as4.add(this.abilities.get(6));
 		
 		
+		ArrayList<Ability> as5 = new ArrayList<Ability>();
+		as5.add(this.abilities.get(19));
+		as5.add(this.abilities.get(18));
+		as5.add(this.abilities.get(12));
+		as5.add(this.abilities.get(13));
+		as5.add(this.abilities.get(11));
+		
+		
+		ArrayList<Ability> as6 = new ArrayList<Ability>();
+		as6.add(this.abilities.get(15));
+		as6.add(this.abilities.get(14));
+		as6.add(this.abilities.get(10));
+		as6.add(this.abilities.get(17));
+		as6.add(this.abilities.get(16));
+		
+		
 		//Assassination
 		Mission m0 = new Mission();
 		m0.setReward(this.getRewards().get(0));
@@ -421,7 +437,7 @@ public class Account {
 		Mission m2 = new Mission();
 		m2.setReward(this.getRewards().get(2));
 		m2.setDescription("Rescue Deckard Cain from the hands of Iron Juggernaut and The Watcher");
-		m2.setLevel(100);
+		m2.setLevel(105);
 		m2.setXp(200);
 		m2.setResourceCost(50);
 		m2.setName("The Legacy of Cain");
@@ -430,7 +446,7 @@ public class Account {
 		Mission m3 = new Mission();
 		m3.setReward(this.getRewards().get(3));
 		m3.setDescription("Protect the king near the Old Cathedral.");
-		m3.setLevel(100);
+		m3.setLevel(109);
 		m3.setXp(200);
 		m3.setResourceCost(50);
 		m3.setName("Joffery Must Not Fall");
@@ -439,17 +455,37 @@ public class Account {
 		Mission m4 = new Mission();
 		m4.setReward(this.getRewards().get(4));
 		m4.setDescription("Free the Imprisoned Angel and escort him back to town.");
-		m4.setLevel(100);
+		m4.setLevel(106);
 		m4.setXp(200);
 		m4.setResourceCost(50);
 		m4.setName("Imprisoned Angel");
 		m4.setAbilities(as4);
+		
+		Mission m5 = new Mission();
+		m5.setReward(this.getRewards().get(5));
+		m5.setDescription("Venture down into the haunted well and free the ghostly spirit.");
+		m5.setLevel(102);
+		m5.setXp(200);
+		m5.setResourceCost(50);
+		m5.setName("The Ghost Inside");
+		m5.setAbilities(as5);
+		
+		Mission m6 = new Mission();
+		m6.setReward(this.getRewards().get(6));
+		m6.setDescription("Search the abandoned town for signs of life.");
+		m6.setLevel(104);
+		m6.setXp(200);
+		m6.setResourceCost(50);
+		m6.setName("The Dead Don't Rest");
+		m6.setAbilities(as6);
 		
 		this.missions.add(m0);
 		this.missions.add(m1);
 		this.missions.add(m2);
 		this.missions.add(m3);
 		this.missions.add(m4);
+		this.missions.add(m5);
+		this.missions.add(m6);
 		
 		
 	}
