@@ -18,9 +18,11 @@ public class ChampionGUI extends JPanel implements ActionListener {
 	public Champion selectedChamp = new Champion();
 	public Equipment selectedEquip = new Equipment();
 	public int index;
+	public Account account;
 	
 	public ChampionGUI(Account a){
 		
+		account = a;
 		champs = a.getChampions();
 		equipment = a.getEquipments();
 		stash = a.getStash();
@@ -60,30 +62,32 @@ public class ChampionGUI extends JPanel implements ActionListener {
         availStash.setLayout(null);
         availStash.setBounds(500, 10, 200, 30);
         
-        stash0 = new JButton(equipment.get(0).getName());
+        stash0 = new JButton();
         stash0.setActionCommand("stash0");
         stash0.setLayout(null);
         stash0.setBounds(500, 50, 100, 30);
         
-        stash1 = new JButton(equipment.get(1).getName()); 
+        stash1 = new JButton(); 
         stash1.setActionCommand("stash1");
         stash1.setLayout(null);
         stash1.setBounds(500, 90, 100, 30);
         
-        stash2 = new JButton(equipment.get(2).getName());
+        stash2 = new JButton();
         stash2.setActionCommand("stash2");
         stash2.setLayout(null);
         stash2.setBounds(500, 130, 100, 30);
         
-        stash3 = new JButton(equipment.get(3).getName());
+        stash3 = new JButton();
         stash3.setActionCommand("stash3");
         stash3.setLayout(null);
         stash3.setBounds(500, 170, 100, 30);
         
-        stash4 = new JButton(equipment.get(4).getName());
+        stash4 = new JButton();
         stash4.setActionCommand("stash4");
         stash4.setLayout(null);
         stash4.setBounds(500, 210, 100, 30);
+        
+        refreshStash();
 		
         //EQUIP BUTTONS
         setEquip = new JButton("Equip");
@@ -164,7 +168,6 @@ public class ChampionGUI extends JPanel implements ActionListener {
 
 
 	public static void createGUI(Account a) {
-		
         JFrame frame = new JFrame("Champions");
 
         frame.setVisible(true);
@@ -259,6 +262,7 @@ public class ChampionGUI extends JPanel implements ActionListener {
     		stash.remove(selectedEquip);
     		refreshStash();
     		changeDisplayInfo(index);
+    		updateAccount();
     	}
     	else if("UnequipSlot1".equals(e.getActionCommand())){
     		Equipment temp = new Equipment();
@@ -269,6 +273,7 @@ public class ChampionGUI extends JPanel implements ActionListener {
     		stash.add(temp);
     		refreshStash();
     		changeDisplayInfo(index);
+    		updateAccount();
     	}
     	else if("UnequipSlot2".equals(e.getActionCommand())){
     		Equipment temp1 = new Equipment();
@@ -279,31 +284,27 @@ public class ChampionGUI extends JPanel implements ActionListener {
     		stash.add(temp1);
     		refreshStash();
     		changeDisplayInfo(index);
+    		updateAccount();
     	}
     	//STASH BUTTONS
     	else if("stash0".equals(e.getActionCommand())){
-    //		if(stash.size() >= 1)
-    			selectedEquip = stash.get(0);
+    		selectedEquip = stash.get(0);
     		stash0.setEnabled(false); stash1.setEnabled(true); stash2.setEnabled(true); stash3.setEnabled(true); stash4.setEnabled(true);
     	}
     	else if("stash1".equals(e.getActionCommand())){
-    //		if(stash.size() >= 2)
-    			selectedEquip = stash.get(1);
+    		selectedEquip = stash.get(1);
     		stash0.setEnabled(true); stash1.setEnabled(false); stash2.setEnabled(true); stash3.setEnabled(true); stash4.setEnabled(true);
     	}
     	else if("stash2".equals(e.getActionCommand())){
-    //		if(stash.size() >= 3)
-    			selectedEquip = stash.get(2);
+    		selectedEquip = stash.get(2);
     		stash0.setEnabled(true); stash1.setEnabled(true); stash2.setEnabled(false); stash3.setEnabled(true); stash4.setEnabled(true);
     	}
     	else if("stash3".equals(e.getActionCommand())){
-    //		if(stash.size() >= 4)
-    			selectedEquip = stash.get(3);
+    		selectedEquip = stash.get(3);
     		stash0.setEnabled(true); stash1.setEnabled(true); stash2.setEnabled(true); stash3.setEnabled(false); stash4.setEnabled(true);
     	}
     	else if("stash4".equals(e.getActionCommand())){
-    //		if(stash.size() == 5)
-    			selectedEquip = stash.get(4);
+    		selectedEquip = stash.get(4);
     		stash0.setEnabled(true); stash1.setEnabled(true); stash2.setEnabled(true); stash3.setEnabled(true); stash4.setEnabled(false);
     	}
     	
@@ -383,6 +384,11 @@ public class ChampionGUI extends JPanel implements ActionListener {
     		stash3.setText(stash.get(3).getName());
     		stash4.setText(stash.get(4).getName());
     	}
+    }
+    
+    public void updateAccount(){
+    	account.setChampions(champs);
+    	account.setStash(stash);
     }
     
     
