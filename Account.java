@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import javax.swing.ImageIcon;
+
 public class Account {
 	private ArrayList<Champion> champions;
 
@@ -124,54 +126,73 @@ public class Account {
 		//Warrior
 		Ability a0 = new Ability();
 		a0.setName("Heroic Strike");
-//		a0.setIcon("null");
+		a0.setIcon(new ImageIcon("images\\a0-icon.PNG"));
 		Ability a1 = new Ability();
 		a1.setName("Execute");
+		a1.setIcon(new ImageIcon("images\\a1-icon.PNG"));
 		//Paladin
 		Ability a2 = new Ability();
 		a2.setName("Judgment");
+		a2.setIcon(new ImageIcon("images\\a2-icon.PNG"));
 		Ability a3 = new Ability();
 		a3.setName("Repentence");
+		a3.setIcon(new ImageIcon("images\\a3-icon.PNG"));
 		//Hunter
 		Ability a4 = new Ability();
 		a4.setName("Aimed Shot");
+		a4.setIcon(new ImageIcon("images\\a4-icon.PNG"));
 		Ability a5 = new Ability();
 		a5.setName("Multishot");
+		a5.setIcon(new ImageIcon("images\\a5-icon.PNG"));
 		//Rogue
 		Ability a6 = new Ability();
 		a6.setName("Backstab");
+		a6.setIcon(new ImageIcon("images\\a6-icon.PNG"));
 		Ability a7 = new Ability();
 		a7.setName("Sap");
+		a7.setIcon(new ImageIcon("images\\a7-icon.PNG"));
 		//Priest
 		Ability a8 = new Ability();
 		a8.setName("Smite");
+		a8.setIcon(new ImageIcon("images\\a8-icon.PNG"));
 		Ability a9 = new Ability();
 		a9.setName("Penance");
+		a9.setIcon(new ImageIcon("images\\a9-icon.PNG"));
 		//Shaman
 		Ability a10 = new Ability();
 		a10.setName("Stormstrike");
+		a10.setIcon(new ImageIcon("images\\a10-icon.PNG"));
 		Ability a11 = new Ability();
 		a11.setName("Lightning Bolt");
+		a11.setIcon(new ImageIcon("images\\a11-icon.PNG"));
 		//Mage
 		Ability a12 = new Ability();
 		a12.setName("Fireball");
+		a12.setIcon(new ImageIcon("images\\a12-icon.PNG"));
 		Ability a13 = new Ability();
 		a13.setName("Frost Nova");
+		a13.setIcon(new ImageIcon("images\\a13-icon.PNG"));
 		//Warlock
 		Ability a14 = new Ability();
 		a14.setName("Chaos Bolt");
+		a14.setIcon(new ImageIcon("images\\a14-icon.PNG"));
 		Ability a15 = new Ability();
 		a15.setName("Fear");
+		a15.setIcon(new ImageIcon("images\\a15-icon.PNG"));
 		//Monk
 		Ability a16 = new Ability();
 		a16.setName("Fists of Fury");
+		a16.setIcon(new ImageIcon("images\\a16-icon.PNG"));
 		Ability a17 = new Ability();
 		a17.setName("Tiger Palm");
+		a17.setIcon(new ImageIcon("images\\a17-icon.PNG"));
 		//Druid
 		Ability a18 = new Ability();
 		a18.setName("Lunar Strike");
+		a18.setIcon(new ImageIcon("images\\a18-icon.PNG"));
 		Ability a19 = new Ability();
 		a19.setName("Moonfire");
+		a19.setIcon(new ImageIcon("images\\a19-icon.PNG"));
 		
 		this.abilities.add(a0);
 		this.abilities.add(a1);
@@ -274,26 +295,31 @@ public class Account {
 		e0.setBonusChance(0.1);
 		e0.setBonusXP(0);
 		e0.setName("Shield");
+		e0.setIcon(new ImageIcon("images\\e0-icon.PNG"));
 		
 		Equipment e1 = new Equipment();
 		e1.setBonusChance(0.1);
 		e1.setBonusXP(10);
 		e1.setName("Mace");
+		e1.setIcon(new ImageIcon("images\\e1-icon.PNG"));
 		
 		Equipment e2 = new Equipment();
 		e2.setBonusChance(0.2);
 		e2.setBonusXP(0);
 		e2.setName("Helmet");
+		e2.setIcon(new ImageIcon("images\\e2-icon.PNG"));
 		
 		Equipment e3 = new Equipment();
 		e3.setBonusChance(0);
 		e3.setBonusXP(20);
 		e3.setName("Dagger");
+		e3.setIcon(new ImageIcon("images\\e3-icon.PNG"));
 		
 		Equipment e4 = new Equipment();
 		e4.setBonusChance(0.05);
 		e4.setBonusXP(25);
 		e4.setName("Axe");
+		e4.setIcon(new ImageIcon("images\\e4-icon.PNG"));
 		
 		this.equipments.add(e0);
 		this.equipments.add(e1);
