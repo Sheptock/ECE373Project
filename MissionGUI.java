@@ -26,6 +26,7 @@ public class MissionGUI extends JFrame {
 		setVisible(true);
 		
 		buildGUI();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	public void buildGUI() {
@@ -38,8 +39,9 @@ public class MissionGUI extends JFrame {
 		missionLevel.setAlignmentY(LEFT_ALIGNMENT);
 		missionLevel.setVisible(true);
 		
-		JPanel missionDescription = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		JPanel missionDescription = new JPanel();
 		
+		missionDescription.setLayout(new FlowLayout(FlowLayout.LEADING));
 		missionDescription.setBounds(10,10,10,10);
 		
 		missionDescription.add(new JLabel(mission.getDescription()));
