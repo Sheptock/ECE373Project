@@ -14,6 +14,7 @@ public class Driver {
 		
 		newGUI = new LoginGUI("Welcome to the Halls of Valor!", account1);
 		
+		//if login is correct then proceed
 		SelectScreenGUI selectScreen = new SelectScreenGUI(account1);
 		selectScreen.createGUI();
 		
