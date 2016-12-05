@@ -78,8 +78,8 @@ public class Account {
 		return this.abilities;
 	}
 
-	public void setChampions(Champion champions) {
-		this.champions.add(champions);
+	public void setChampions(ArrayList<Champion> champions) {
+		this.champions = champions;
 	}
 
 	public void setUsername(String username) {
@@ -114,7 +114,7 @@ public class Account {
 		this.resources = res;
 	}
 
-	public boolean login(String name, String pw  ) {
+	public boolean login(String name, String pw) {
 		if(username.equals(name) && password.equals(pw)) {
 			return true;
 		} else {

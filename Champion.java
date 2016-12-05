@@ -19,6 +19,15 @@ public class Champion {
 		abilities = new ArrayList<Ability>();
 		currentMission = new Mission();
 	}
+	
+	public Champion(String aName){
+		experience = 0;
+		name = aName;
+		level = 100;
+		equipment = new ArrayList<Equipment>();
+		abilities = new ArrayList<Ability>();
+		currentMission = new Mission();
+	}
 
 	public int getExperience() {
 		return this.experience;
