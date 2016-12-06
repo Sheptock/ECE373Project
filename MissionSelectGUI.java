@@ -6,8 +6,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 	
-public class MissionSelectGUI extends JPanel implements ActionListener {
-		Account account;
+public class MissionSelectGUI extends JPanel {
+		private Account account;
+		private int missionNo1, missionNo2, missionNo3;
+		private JButton mission0, mission1, mission2;
 	//Populate Missions
 	public MissionSelectGUI(Account a ){
 		ArrayList<Mission> tempMissions = a.getMissions();
@@ -30,8 +32,9 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		
 		
 		
-		JButton mission0 = new JButton(tempMissions.get(rand0).getName() + " \n" + "Level: " + String.valueOf(tempMissions.get(rand0).getLevel()));
+		mission0 = new JButton(tempMissions.get(rand0).getName() + " \n" + "Level: " + String.valueOf(tempMissions.get(rand0).getLevel()));
 		mission0.setActionCommand("mission0");
+		mission0.addActionListener(new ButtonListener());
 		add(mission0);
 		
 		ImageIcon image0 = new ImageIcon("images\\reward-icon.PNG");
@@ -49,8 +52,9 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		}
 		add(mission0_label);
 		
-		JButton mission1 = new JButton(tempMissions.get(rand1).getName()+ " \n" + "Level: " + String.valueOf(tempMissions.get(rand1).getLevel()));
+		mission1 = new JButton(tempMissions.get(rand1).getName()+ " \n" + "Level: " + String.valueOf(tempMissions.get(rand1).getLevel()));
 		mission1.setActionCommand("mission1");
+		mission1.addActionListener(new ButtonListener());
 		add(mission1);
 		
 		ImageIcon image1 = new ImageIcon("images\\reward-icon.PNG");
@@ -68,8 +72,9 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		}
 		add(mission1_label);
 		
-		JButton mission2 = new JButton(tempMissions.get(rand2).getName()+ " \n" + "Level: " + String.valueOf(tempMissions.get(rand2).getLevel()));
+		mission2 = new JButton(tempMissions.get(rand2).getName()+ " \n" + "Level: " + String.valueOf(tempMissions.get(rand2).getLevel()));
 		mission2.setActionCommand("mission2");
+		mission2.addActionListener(new ButtonListener());
 		add(mission2);
 		
 		ImageIcon image2 = new ImageIcon("images\\reward-icon.PNG");
@@ -88,6 +93,9 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		
 		add(mission2_label);
 		
+		missionNo1 = rand0;
+		missionNo2 = rand1;
+		missionNo3 = rand2;
 		
 	}
 
@@ -106,28 +114,40 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
  
         //Display the window.
         frame.pack();
+        frame.setLocationRelativeTo(null);	// making window appear on center of screen
         frame.setVisible(true);
     }
- 
+	private class ButtonListener implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			JButton source = (JButton)(e.getSource());
+			
+			if(source.equals(mission0)) {
+				MissionGUI mi0 = new MissionGUI(account.getMissions().get(missionNo1), account);
+			} else if(source.equals(mission0)) {
+				MissionGUI mi0 = new MissionGUI(account.getMissions().get(missionNo2), account);
+			} else {
+				MissionGUI mi0 = new MissionGUI(account.getMissions().get(missionNo3), account);
+			}
+		}
+	}
 
 
- 	public void actionPerformed(ActionEvent e){
-	//Load a specific Mission Page Depending on what is selected.
- 	
- 		if("mission0".equals(e.getActionCommand())) {
- 			//JACOB/NICK WHOEVER IS WRITING SPECIFIC MISSION GUI CALL THAT CODE HERE
-// 			MissionGUI mission0 = new MissionGUI("mission0", )
- 		}
- 		
- 		else if("mission1".equals(e.getActionCommand())) {
- 			//JACOB/NICK WHOEVER IS WRITING SPECIFIC MISSION GUI CALL THAT CODE HERE
- 		}
- 		
- 		else if("mission2".equals(e.getActionCommand())) {
- 			//JACOB/NICK WHOEVER IS WRITING SPECIFIC MISSION GUI CALL THAT CODE HERE
- 		}
- 	
- 		
- 	}
+// 	public void actionPerformed(ActionEvent e){
+//	//Load a specific Mission Page Depending on what is selected.
+// 	
+// 		if(source.equals(e.getActionCommand())) {
+// 			MissionGUI mission0 = new MissionGUI(account.getMissions().get(missionNo1), account);
+// 		}
+// 		
+// 		else if("mission1".equals(e.getActionCommand())) {
+// 			MissionGUI mission0 = new MissionGUI(account.getMissions().get(missionNo2), account);
+// 		}
+// 		
+// 		else if("mission2".equals(e.getActionCommand())) {
+// 			MissionGUI mission0 = new MissionGUI(account.getMissions().get(missionNo3), account);
+// 		}
+// 	
+// 		
+// 	}
 
 }

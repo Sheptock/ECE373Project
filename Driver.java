@@ -13,7 +13,7 @@ public class Driver {
 		LoginGUI newGUI;
 		
 
-//		newGUI = new LoginGUI("Welcome to the Halls of Valor!", account1);
+		newGUI = new LoginGUI("Welcome to the Halls of Valor!", account1);
 		//if login is correct then proceed
 //		SelectScreenGUI selectScreen = new SelectScreenGUI(account1);
 //		selectScreen.createGUI();
@@ -22,7 +22,7 @@ public class Driver {
 //		selectScreen.createGUI();
 
 		
-		MissionGUI missionGUI = new MissionGUI("this is a test", mission1);
+//		MissionGUI missionGUI = new MissionGUI("this is a test", mission1, account1);
 //		MissionSelectGUI missionSelGUI = new MissionSelectGUI(account1);
 //		missionSelGUI.createGUI();
 

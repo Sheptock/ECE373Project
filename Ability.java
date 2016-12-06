@@ -25,5 +25,8 @@ public class Ability {
 	public void setIcon(ImageIcon Icon) {
 		this.Icon = Icon;
 	}
+	public String toString() {
+		return Name;
+	}
 
 }

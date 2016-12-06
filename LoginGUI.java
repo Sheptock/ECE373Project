@@ -7,7 +7,8 @@ public class LoginGUI extends JFrame {
 //	private JMenuBar menuBar;
 	private Account account;
 	private JButton loginButton;
-	private JPanel panelButton;
+	private JButton quitButton;
+	private JPanel buttonPanel;
 	
 	public LoginGUI(String windowTitle, Account userAccount) {
 		super(windowTitle);
@@ -21,7 +22,8 @@ public class LoginGUI extends JFrame {
 		
 		buildGUI();
 		
-		
+		// this line centers the window on the screen when it is created
+		setLocationRelativeTo(null);
 		
 		setVisible(true);
 		
@@ -29,20 +31,21 @@ public class LoginGUI extends JFrame {
 	}
 	
 	public void buildGUI() {
+		GridLayout buttonLayout = new GridLayout(1,2);
+		
 		loginButton = new JButton("Login");
-		panelButton = new JPanel();
-		
-//		panelButton.setBounds();
-		panelButton.setLayout(null);
-		panelButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-		loginButton.setBounds(120, 200, 200, 30);
-		
-		
+		buttonPanel = new JPanel();
+		quitButton = new JButton("Quit");
 		
 		loginButton.addActionListener(new ButtonListener());
-		panelButton.add(loginButton);
-		add(panelButton);
-//		setJMenuBar(menuBar);
+		quitButton.addActionListener(new ButtonListener());
+		
+		buttonLayout.setHgap(5);
+		buttonPanel.setLayout(buttonLayout);
+		
+		buttonPanel.add(loginButton);
+		buttonPanel.add(quitButton);
+		add(buttonPanel, BorderLayout.SOUTH);
 	}
 	
 	private class ButtonListener implements ActionListener {
@@ -51,6 +54,8 @@ public class LoginGUI extends JFrame {
 			
 			if(source.equals(loginButton)) {
 				handleLogin();
+			} else if(source.equals(quitButton)) {
+				handleQuit();
 			}
 		}
 		private void handleLogin() {
@@ -69,18 +74,16 @@ public class LoginGUI extends JFrame {
 			if(account.login(usernameField.getText(), passwordField.getText())) {
 				JOptionPane.showMessageDialog(null, "Logging in...");
 //				setVisible(false);
+				SelectScreenGUI selectScreen = new SelectScreenGUI(account);
+				selectScreen.createGUI();
 				dispose();
 			} else {
-				JOptionPane.showMessageDialog(null, "Failure");
-			}
-			
-//			String temp = JOptionPane.showInputDialog(null, "Enter Password for " + account.getUsername() + ":", "Login", JOptionPane.PLAIN_MESSAGE);
-//			
-//			if (account.login("username", temp)) {
-//				JOptionPane.showMessageDialog(null, "Success");
-//			} else {
-//				JOptionPane.showMessageDialog(null, "Password not correct.");
-//			}
+				JOptionPane.showMessageDialog(null, "Please Try Again");
+			}			
+		}
+		private void handleQuit() {
+			JOptionPane.showMessageDialog(null, "Goodbye");
+			System.exit(0);
 		}
 	}
 }

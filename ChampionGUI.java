@@ -169,7 +169,9 @@ public class ChampionGUI extends JPanel implements ActionListener {
 
 	public static void createGUI(Account a) {
         JFrame frame = new JFrame("Champions");
-
+        
+        frame.setLocationRelativeTo(null);	// making window appear in center of screen
+        
         frame.setVisible(true);
         frame.setSize(750, 470);
         frame.setLayout(null);

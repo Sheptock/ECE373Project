@@ -110,6 +110,13 @@ public class Account {
 		this.rewards = rewards;
 	}
 	
+	// method which can be used to add or subtract resources from the account;
+	// to subtract, simply pass in a negative value for res
+	public void addResources(int res) {
+		resources = resources + res;
+		return;
+	}
+	
 	public void setResources(int res){
 		this.resources = res;
 	}
@@ -339,37 +346,37 @@ public class Account {
 		
 		Reward r0 = new Reward();
 		r0.setBonusEquipment(this.getEquipments().get(0));
-		r0.setBonusResources(0);
+		r0.setBonusResources(10);
 		r0.setBonusXP(0);
 		
 		Reward r1 = new Reward();
 		r1.setBonusEquipment(this.getEquipments().get(1));
-		r1.setBonusResources(0);
+		r1.setBonusResources(10);
 		r1.setBonusXP(0);
 		
 		Reward r2 = new Reward();
 		r2.setBonusEquipment(this.getEquipments().get(2));
-		r2.setBonusResources(0);
+		r2.setBonusResources(50);
 		r2.setBonusXP(0);
 		
 		Reward r3 = new Reward();
 		r3.setBonusEquipment(this.getEquipments().get(3));
-		r3.setBonusResources(0);
+		r3.setBonusResources(90);
 		r3.setBonusXP(0);
 		
 		Reward r4 = new Reward();
 		r4.setBonusEquipment(this.getEquipments().get(4));
-		r4.setBonusResources(0);
+		r4.setBonusResources(60);
 		r4.setBonusXP(0);
 		
 		Reward r5 = new Reward();
 		r5.setBonusEquipment(null);
-		r5.setBonusResources(10);
+		r5.setBonusResources(20);
 		r5.setBonusXP(0);
 		
 		Reward r6 = new Reward();
 		r6.setBonusEquipment(null);
-		r6.setBonusResources(0);
+		r6.setBonusResources(40);
 		r6.setBonusXP(50);
 		
 		this.rewards.add(r0);

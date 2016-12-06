@@ -103,4 +103,8 @@ public class Champion {
 			return;
 		}
 	}
+	
+	public String toString() {
+		return name;
+	}
 }

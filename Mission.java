@@ -93,14 +93,91 @@ public class Mission {
 	}
 
 	public int calculateMissionSuccessChance(Champion p1, Champion p2, Champion p3  ) {
-	
-		return -1;
+		
+		int totalChance = 0;
+		ArrayList<Ability> championAbilities = new ArrayList<Ability>();
+		championAbilities.add(p1.getAbilities().get(0));
+		championAbilities.add(p1.getAbilities().get(1));
+		championAbilities.add(p2.getAbilities().get(0));
+		championAbilities.add(p2.getAbilities().get(1));
+		championAbilities.add(p3.getAbilities().get(0));
+		championAbilities.add(p3.getAbilities().get(1));
+		
+		int incChance = 1;
+		double decChance = 1;
+		double avgLevel;
+		int i = 0;
+		int totalMatch = 0;
+		boolean flag1 = false;
+		boolean flag2 = false;
+		boolean flag3 = false;
+		boolean flag4 = false;
+		boolean flag5 = false;
+		boolean flag6 = false;
+		
+		if(this.abilities.size() == 2) {
+			incChance = 30;
+			decChance = 15;
+		}
+		
+		else if(this.abilities.size() == 3) {
+			incChance = 25;
+			decChance = 12.5;
+		}
+		else if(this.abilities.size() == 4) {
+			incChance = 20;
+			decChance = 10;
+		}		
+		else if(this.abilities.size() == 5) {
+			incChance = 15;
+			decChance = 7.5;
+		}
+		else if(this.abilities.size() == 6) {
+			incChance = 10;
+			decChance = 5;
+		}		
+		
+		for(i = 0; i < this.abilities.size(); i++) {
+			if(championAbilities.get(0).getName() == this.abilities.get(i).getName()) {
+				flag1 = true;
+				totalMatch = totalMatch + 1;
+			}
+			if(championAbilities.get(0).getName() == this.abilities.get(i).getName()) {
+				flag2 = true;
+				totalMatch = totalMatch + 1;
+			}
+			if(championAbilities.get(2).getName() == this.abilities.get(i).getName()) {
+				flag3 = true;
+				totalMatch = totalMatch + 1;
+			}
+			if(championAbilities.get(3).getName() == this.abilities.get(i).getName()) {
+				flag4 = true;
+				totalMatch = totalMatch + 1;
+			}
+			if(championAbilities.get(4).getName() == this.abilities.get(i).getName()) {
+				flag5 = true;
+				totalMatch = totalMatch + 1;
+			}
+			if(championAbilities.get(5).getName() == this.abilities.get(i).getName()) {
+				flag6 = true;
+				totalMatch = totalMatch + 1;
+			}
+		}
+		
+		totalChance = (int)(totalChance + totalMatch*incChance + (6 - totalMatch)*decChance);
+
+		avgLevel = (double)(p1.getLevel() + p2.getLevel() + p3.getLevel())/3.0;
+		totalChance = (int)(totalChance + 3*(avgLevel + 2 - this.level));
+		completeChance = totalChance;
+		
+		return totalChance;
 	}
 
-	public boolean missionOutcome( ) {
+	public boolean missionOutcome() {
 		double number = Math.random();
+		number = 100 * number;
 		
-		if(this.completeChance < number) {
+		if(this.completeChance > number) {
 			return true;
 		}
 		

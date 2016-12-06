@@ -36,7 +36,10 @@ public class SelectScreenGUI extends JPanel implements ActionListener {
 	        
 	        //Display the window.
 	        frame.pack();
+	        frame.setLocationRelativeTo(null);	// making window appear on center of screen
 	        frame.setVisible(true);
+	        
+	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    }
 	 
 	
