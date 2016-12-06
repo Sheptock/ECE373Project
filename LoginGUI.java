@@ -38,22 +38,28 @@ public class LoginGUI extends JFrame {
 		buttonPanel = new JPanel();
 		dispPanel = new JPanel();
 		
+		setLayout(new BorderLayout());
+		
 //		panelButton.setBounds();
-		buttonPanel.setLayout(new GridLayout(2,1));
+		buttonPanel.setLayout(new GridLayout(1,2));
 //		panelButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 //		panelButton.setBounds(10,10,10,10);
 		
 //		loginButton.setLayout(new GridLayout());
-//		loginButton.setBounds(10, 10, 10, 10);
+		loginButton.setBounds(10,10,10,10);
 		
 		
 		
 		
 		loginButton.addActionListener(new ButtonListener());
+		quitButton.addActionListener(new ButtonListener());
+		
+		dispPanel.add(new JLabel("Welcome to the Halls of Valor!"));
+		
 		buttonPanel.add(loginButton);
 		buttonPanel.add(quitButton);
-		add(dispPanel);
-		add(buttonPanel);
+		add(dispPanel, BorderLayout.CENTER);
+		add(buttonPanel, BorderLayout.SOUTH);
 		
 //		setJMenuBar(menuBar);
 	}
@@ -64,6 +70,8 @@ public class LoginGUI extends JFrame {
 			
 			if(source.equals(loginButton)) {
 				handleLogin();
+			} else if(source.equals(quitButton)) {
+				handleQuit();
 			}
 		}
 		private void handleLogin() {
@@ -95,6 +103,10 @@ public class LoginGUI extends JFrame {
 //			} else {
 //				JOptionPane.showMessageDialog(null, "Password not correct.");
 //			}
+		}
+		private void handleQuit() {
+			JOptionPane.showMessageDialog(null, "Exiting");
+			System.exit(0);
 		}
 	}
 }
