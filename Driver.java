@@ -12,6 +12,7 @@ public class Driver {
 		account1.setPassword("password");
 		LoginGUI newGUI;
 		
+
 //		newGUI = new LoginGUI("Welcome to the Halls of Valor!", account1);
 		//if login is correct then proceed
 //		SelectScreenGUI selectScreen = new SelectScreenGUI(account1);
@@ -24,5 +25,6 @@ public class Driver {
 		MissionGUI missionGUI = new MissionGUI("this is a test", mission1);
 //		MissionSelectGUI missionSelGUI = new MissionSelectGUI(account1);
 //		missionSelGUI.createGUI();
+
 	}
 }
