@@ -34,7 +34,7 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		mission0.setActionCommand("mission0");
 		add(mission0);
 		
-		ImageIcon image0 = new ImageIcon("src\\reward-icon.PNG");
+		ImageIcon image0 = new ImageIcon("images\\reward-icon.PNG");
 		JLabel mission0_label = new JLabel(image0);
 		if(tempMissions.get(rand0).getReward().getBonusEquipment()!= null){
 			mission0_label.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand0).getReward().getBonusXP())+
@@ -53,7 +53,7 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		mission1.setActionCommand("mission1");
 		add(mission1);
 		
-		ImageIcon image1 = new ImageIcon("src\\reward-icon.PNG");
+		ImageIcon image1 = new ImageIcon("images\\reward-icon.PNG");
 		JLabel mission1_label = new JLabel(image1);
 		if(tempMissions.get(rand1).getReward().getBonusEquipment()!= null){
 			mission1_label.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand1).getReward().getBonusXP())+
@@ -72,7 +72,7 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
 		mission2.setActionCommand("mission2");
 		add(mission2);
 		
-		ImageIcon image2 = new ImageIcon("src\\reward-icon.PNG");
+		ImageIcon image2 = new ImageIcon("images\\reward-icon.PNG");
 		JLabel mission2_label = new JLabel(image2);
 		if(tempMissions.get(rand2).getReward().getBonusEquipment()!= null){
 			mission2_label.setToolTipText("XP:" + String.valueOf(tempMissions.get(rand2).getReward().getBonusXP())+

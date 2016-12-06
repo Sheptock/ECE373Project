@@ -445,8 +445,8 @@ public class Account {
 		Mission m0 = new Mission();
 		m0.setReward(this.getRewards().get(0));
 		m0.setDescription("Invade the cave and kill Agnidox and Erethon.");
-		m0.setLevel(100);
-		m0.setXp(200);
+		m0.setLevel(1);
+		m0.setXp(50);
 		m0.setResourceCost(50);
 		m0.setName("Assassination");
 		m0.setAbilities(as0);
@@ -454,8 +454,8 @@ public class Account {
 		Mission m1 = new Mission();
 		m1.setReward(this.getRewards().get(1));
 		m1.setDescription("Travel to the top of the mountain and slay Ember, Bone Warlock, and Sven");
-		m1.setLevel(100);
-		m1.setXp(200);
+		m1.setLevel(1);
+		m1.setXp(50);
 		m1.setResourceCost(50);
 		m1.setName("The Broken Blade");
 		m1.setAbilities(as1);
@@ -463,8 +463,8 @@ public class Account {
 		Mission m2 = new Mission();
 		m2.setReward(this.getRewards().get(2));
 		m2.setDescription("Rescue Deckard Cain from the hands of Iron Juggernaut and The Watcher");
-		m2.setLevel(105);
-		m2.setXp(200);
+		m2.setLevel(5);
+		m2.setXp(250);
 		m2.setResourceCost(50);
 		m2.setName("The Legacy of Cain");
 		m2.setAbilities(as2);
@@ -472,8 +472,8 @@ public class Account {
 		Mission m3 = new Mission();
 		m3.setReward(this.getRewards().get(3));
 		m3.setDescription("Protect the king near the Old Cathedral.");
-		m3.setLevel(109);
-		m3.setXp(200);
+		m3.setLevel(9);
+		m3.setXp(450);
 		m3.setResourceCost(50);
 		m3.setName("Joffery Must Not Fall");
 		m3.setAbilities(as3);
@@ -481,8 +481,8 @@ public class Account {
 		Mission m4 = new Mission();
 		m4.setReward(this.getRewards().get(4));
 		m4.setDescription("Free the Imprisoned Angel and escort him back to town.");
-		m4.setLevel(106);
-		m4.setXp(200);
+		m4.setLevel(6);
+		m4.setXp(300);
 		m4.setResourceCost(50);
 		m4.setName("Imprisoned Angel");
 		m4.setAbilities(as4);
@@ -490,8 +490,8 @@ public class Account {
 		Mission m5 = new Mission();
 		m5.setReward(this.getRewards().get(5));
 		m5.setDescription("Venture down into the haunted well and free the ghostly spirit.");
-		m5.setLevel(102);
-		m5.setXp(200);
+		m5.setLevel(2);
+		m5.setXp(100);
 		m5.setResourceCost(50);
 		m5.setName("The Ghost Inside");
 		m5.setAbilities(as5);
@@ -499,7 +499,7 @@ public class Account {
 		Mission m6 = new Mission();
 		m6.setReward(this.getRewards().get(6));
 		m6.setDescription("Search the abandoned town for signs of life.");
-		m6.setLevel(104);
+		m6.setLevel(4);
 		m6.setXp(200);
 		m6.setResourceCost(50);
 		m6.setName("The Dead Don't Rest");
