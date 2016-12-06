@@ -116,6 +116,7 @@ public class MissionSelectGUI extends JPanel implements ActionListener {
  	
  		if("mission0".equals(e.getActionCommand())) {
  			//JACOB/NICK WHOEVER IS WRITING SPECIFIC MISSION GUI CALL THAT CODE HERE
+// 			MissionGUI mission0 = new MissionGUI("mission0", )
  		}
  		
  		else if("mission1".equals(e.getActionCommand())) {
