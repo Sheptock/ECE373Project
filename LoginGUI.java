@@ -16,31 +16,38 @@ public class LoginGUI extends JFrame {
 		
 		account = userAccount;
 		
-		setSize(500,500);
+		setSize(400,250);
 		
 		add(new JLabel("<HTML><center>Welcome to the Halls of Valor!</center></HTML>", SwingConstants.CENTER));
-//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		buildGUI();
 		
 		
-		
+//		pack();
 		setVisible(true);
 		
 
 	}
 	
 	public void buildGUI() {
+		GridLayout buttonLayout = new GridLayout(1,2);
+		
 		loginButton = new JButton("Login");
+		quitButton = new JButton("Quit");
+		
+		dispPanel = new JPanel();
 		buttonPanel = new JPanel();
 		
 		setLayout(new BorderLayout());
 		
+		buttonLayout.setHgap(5);
+		
 //		buttonPanel.setBounds();
 
-		buttonPanel.setLayout(null);
-		buttonPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
-		loginButton.setBounds(120, 200, 200, 30);
+		buttonPanel.setLayout(buttonLayout);
+//		buttonPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
+//		loginButton.setBounds(120, 200, 200, 30);
 
 		
 		
@@ -72,6 +79,12 @@ public class LoginGUI extends JFrame {
 			JTextField passwordField = new JTextField(10);
 			JPanel myPanel = new JPanel();
 			
+			GridLayout layout = new GridLayout(2,1);
+//			layout.setHgap(50);
+			layout.setVgap(10);
+			
+			myPanel.setLayout(layout);
+			
 			myPanel.add(new JLabel("Username: "));
 			myPanel.add(usernameField);
 			myPanel.add(Box.createVerticalStrut(15));
@@ -87,14 +100,6 @@ public class LoginGUI extends JFrame {
 			} else {
 				JOptionPane.showMessageDialog(null, "Failure");
 			}
-			
-//			String temp = JOptionPane.showInputDialog(null, "Enter Password for " + account.getUsername() + ":", "Login", JOptionPane.PLAIN_MESSAGE);
-//			
-//			if (account.login("username", temp)) {
-//				JOptionPane.showMessageDialog(null, "Success");
-//			} else {
-//				JOptionPane.showMessageDialog(null, "Password not correct.");
-//			}
 		}
 		private void handleQuit() {
 			JOptionPane.showMessageDialog(null, "Exiting");

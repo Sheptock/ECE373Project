@@ -21,6 +21,6 @@ public class Driver {
 //		selectScreen.createGUI();
 
 		
-		MissionGUI missionGUI = new MissionGUI("this is a test", mission1);
+//		MissionGUI missionGUI = new MissionGUI("this is a test", mission1);
 	}
 }
