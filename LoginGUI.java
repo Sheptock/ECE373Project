@@ -15,10 +15,18 @@ public class LoginGUI extends JFrame {
 		
 		account = userAccount;
 		
-		setSize(500,500);
+//		setSize(500,500);
 		
 		add(new JLabel("<HTML><center>Welcome to the Halls of Valor!</center></HTML>", SwingConstants.CENTER));
 //		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setLayout(new BorderLayout());
+	    setContentPane(new JLabel(new ImageIcon("C:\\Users\\Owner\\Desktop\\halls_of_valor\\images\\login-background.jpg")));
+	    setLayout(new BorderLayout());
+
+	    // Just for refresh :) Not optional!
+	    setSize(399,399);
+	    setSize(400,400);
 		
 		buildGUI();
 		
@@ -40,12 +48,13 @@ public class LoginGUI extends JFrame {
 		loginButton.addActionListener(new ButtonListener());
 		quitButton.addActionListener(new ButtonListener());
 		
-		buttonLayout.setHgap(5);
+//		buttonLayout.setHgap();
 		buttonPanel.setLayout(buttonLayout);
 		
 		buttonPanel.add(loginButton);
 		buttonPanel.add(quitButton);
 		add(buttonPanel, BorderLayout.SOUTH);
+		add(new JLabel("<HTML><center><b><font color = white>Welcome to the Halls of Valor!</font></b></center></HTML>", SwingConstants.CENTER));
 	}
 	
 	private class ButtonListener implements ActionListener {
@@ -82,7 +91,7 @@ public class LoginGUI extends JFrame {
 			}			
 		}
 		private void handleQuit() {
-			JOptionPane.showMessageDialog(null, "Goodbye");
+//			JOptionPane.showMessageDialog(null, "Goodbye");
 			System.exit(0);
 		}
 	}

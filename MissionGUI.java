@@ -18,11 +18,14 @@ public class MissionGUI extends JFrame {
 	private JButton backButton, startButton;
 	
 	private JLabel successChanceLabel;
+	private JLabel resourceLabel;
 	
 	private GridLayout windowLayout, champSelPanelLayout;
 	
-	public MissionGUI(Mission aMission, Account userAccount) {
+	public MissionGUI(Mission aMission, Account anAccount) {
 //		super(windowTitle);
+		
+		userAccount = anAccount;
 		
 		champSel1 = new JComboBox(userAccount.getChampions().toArray());
 		champSel2 = new JComboBox(userAccount.getChampions().toArray());
@@ -112,10 +115,14 @@ public class MissionGUI extends JFrame {
 		buttonPanel.add(startButton);
 		buttonPanel.add(backButton);
 		
-		resourceCostPanel = new JPanel();
-		resourceCostPanel.add(new JLabel("Resource Cost: " + String.valueOf(mission.getResourceCost())));
+		refreshStart();	//should initially disable the start button
 		
-		setLayout(new GridLayout(7,1,10,10));
+		resourceCostPanel = new JPanel(new GridLayout(1,2,5,0));
+		resourceCostPanel.add(new JLabel("Resource Cost: " + String.valueOf(mission.getResourceCost())));
+		resourceLabel = new JLabel("Available resources: " + String.valueOf(userAccount.getResources()));
+		resourceCostPanel.add(resourceLabel);
+		
+		setLayout(new GridLayout(7,1,0,0));
 		add(missionLevel);
 		add(missionDescription);
 		add(abilityPanel);
@@ -124,17 +131,18 @@ public class MissionGUI extends JFrame {
 		add(resourceCostPanel);
 		add(buttonPanel);
 		
-		
 	}
 	private class DropDownListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			JComboBox source = (JComboBox)(e.getSource());
 			
 			if(source.equals(champSel1) || source.equals(champSel2) || source.equals(champSel3)) {
+				refreshStart();
 				if(champSel1.getSelectedItem().equals(champSel2.getSelectedItem()) || champSel1.getSelectedItem().equals(champSel3.getSelectedItem())
 						|| champSel2.getSelectedItem().equals(champSel3.getSelectedItem())){
 
 					successChanceLabel.setText("You must select three unique champions.");
+					
 				} else {
 					successChanceLabel.setText(String.valueOf(mission.calculateMissionSuccessChance((Champion)champSel1.getSelectedItem(), (Champion)champSel2.getSelectedItem(), (Champion)champSel3.getSelectedItem())) + "%");					
 				}
@@ -152,17 +160,41 @@ public class MissionGUI extends JFrame {
 			}
 		}
 		public void handleStart() {
+//			public void addResources(int res) {
 			userAccount.addResources(-mission.getResourceCost());
-			JOptionPane.showMessageDialog(null, String.valueOf(userAccount.getResources()));
+			resourceLabel.setText("Available resources: " + String.valueOf(userAccount.getResources()));
 			if(mission.missionOutcome() == true) {
-//				JOptionPane.showMessageDialog(null, "You won! You receive: " + mission.getReward().getBonusEquipment().getName() + String.valueOf(mission.getReward().getBonusResources()) + String.valueOf(mission.getReward().getBonusXP()));
-				JOptionPane.showMessageDialog(null, "You Won!");
+				// Note: maybe add in XP value to this if the account still uses XP in a way that I don't recognize
+				
+				JPanel rewardPanel = new JPanel(new GridLayout(4,1,0,5));
+				rewardPanel.add(new JLabel("You won! You receive: "));
+				if(mission.getReward().getBonusEquipment() != null) {
+					rewardPanel.add(new JLabel(mission.getReward().getBonusEquipment().getName()));
+				} else {
+					rewardPanel.add(new JLabel());
+				}
+				rewardPanel.add(new JLabel(String.valueOf(mission.getReward().getBonusResources() + " resources")));
+				rewardPanel.add(new JLabel(String.valueOf(mission.getReward().getBonusXP()) + " XP"));
+				
+				JOptionPane.showMessageDialog(null, rewardPanel);
+				userAccount.getStash().add(mission.getReward().getBonusEquipment());
+				userAccount.addResources(mission.getReward().getBonusResources());
+				dispose();
+//				userAccount.
 			} else {
 				JOptionPane.showMessageDialog(null, "You Failed!");
 			}
 		}
 		public void handleBack() {
 			dispose();
+		}
+	}
+	public void refreshStart() {
+		if(champSel1.getSelectedItem().equals(champSel2.getSelectedItem()) || champSel1.getSelectedItem().equals(champSel3.getSelectedItem())
+				|| champSel2.getSelectedItem().equals(champSel3.getSelectedItem())){
+			startButton.setEnabled(false);
+		} else {
+			startButton.setEnabled(true);
 		}
 	}
 

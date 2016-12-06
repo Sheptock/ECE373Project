@@ -113,7 +113,7 @@ public class Account {
 	// method which can be used to add or subtract resources from the account;
 	// to subtract, simply pass in a negative value for res
 	public void addResources(int res) {
-		resources = resources + res;
+		this.resources = this.resources + res;
 		return;
 	}
 	
