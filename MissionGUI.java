@@ -94,8 +94,8 @@ public class MissionGUI extends JFrame {
 		
 		abilityPanel = new JPanel(new GridLayout(1,3,5,5));
 		abilityPanel.add(new JLabel("Boss abilities:"));
-		abilityPanel.add(new JLabel(mission.getAbilities().get(0).toString()));
-		abilityPanel.add(new JLabel(mission.getAbilities().get(1).toString()));
+		abilityPanel.add(new JLabel(mission.getAbilities().get(0).getName()));
+		abilityPanel.add(new JLabel(mission.getAbilities().get(1).getName()));
 //		abilityPanel.add(new JLabel(mission.getAbilities().get(2).toString()));
 		
 		successChanceLabel = new JLabel("You must select three unique champions.");
