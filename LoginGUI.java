@@ -7,9 +7,7 @@ public class LoginGUI extends JFrame {
 //	private JMenuBar menuBar;
 	private Account account;
 	private JButton loginButton;
-	private JButton quitButton;
-	private JPanel buttonPanel;
-	private JPanel dispPanel;
+	private JPanel panelButton;
 	
 	public LoginGUI(String windowTitle, Account userAccount) {
 		super(windowTitle);
@@ -19,14 +17,12 @@ public class LoginGUI extends JFrame {
 		setSize(500,500);
 		
 		add(new JLabel("<HTML><center>Welcome to the Halls of Valor!</center></HTML>", SwingConstants.CENTER));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		
+//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		buildGUI();
 		
 		
-//		pack();
+		
 		setVisible(true);
 		
 
@@ -34,27 +30,18 @@ public class LoginGUI extends JFrame {
 	
 	public void buildGUI() {
 		loginButton = new JButton("Login");
-		quitButton = new JButton("Quit");
-		buttonPanel = new JPanel();
-		dispPanel = new JPanel();
+		panelButton = new JPanel();
 		
 //		panelButton.setBounds();
-		buttonPanel.setLayout(new GridLayout(2,1));
-//		panelButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-//		panelButton.setBounds(10,10,10,10);
-		
-//		loginButton.setLayout(new GridLayout());
-//		loginButton.setBounds(10, 10, 10, 10);
-		
+		panelButton.setLayout(null);
+		panelButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+		loginButton.setBounds(120, 200, 200, 30);
 		
 		
 		
 		loginButton.addActionListener(new ButtonListener());
-		buttonPanel.add(loginButton);
-		buttonPanel.add(quitButton);
-		add(dispPanel);
-		add(buttonPanel);
-		
+		panelButton.add(loginButton);
+		add(panelButton);
 //		setJMenuBar(menuBar);
 	}
 	
@@ -83,7 +70,6 @@ public class LoginGUI extends JFrame {
 				JOptionPane.showMessageDialog(null, "Logging in...");
 //				setVisible(false);
 				dispose();
-				
 			} else {
 				JOptionPane.showMessageDialog(null, "Failure");
 			}

@@ -164,8 +164,6 @@ public class ChampionGUI extends JPanel implements ActionListener {
         setEquip.addActionListener(this); setUnequip1.addActionListener(this); setUnequip2.addActionListener(this);
         stash0.addActionListener(this); stash1.addActionListener(this); stash2.addActionListener(this);
         stash3.addActionListener(this); stash4.addActionListener(this);
-        
-        createGUI(account);
 	}
 
 
