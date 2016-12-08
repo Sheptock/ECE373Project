@@ -359,32 +359,47 @@ public class ChampionGUI extends JPanel implements ActionListener {
     	else if(stash.size() == 1){
     		stash0.setVisible(true); stash1.setVisible(false); stash2.setVisible(false); stash3.setVisible(false); stash4.setVisible(false);
     		stash0.setText(stash.get(0).getName());
+    		stash0.setToolTipText("<html>Bonus XP: " + stash.get(0).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(0).getBonusChance()*100 + "%</html>");
     	}
     	else if(stash.size() == 2){
     		stash0.setVisible(true); stash1.setVisible(true); stash2.setVisible(false); stash3.setVisible(false); stash4.setVisible(false);
     		stash0.setText(stash.get(0).getName());
+    		stash0.setToolTipText("<html>Bonus XP: " + stash.get(0).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(0).getBonusChance()*100 + "%</html>");
     		stash1.setText(stash.get(1).getName());
+    		stash1.setToolTipText("<html>Bonus XP: " + stash.get(1).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(1).getBonusChance()*100 + "%</html>");
     	}
     	else if(stash.size() == 3){
     		stash0.setVisible(true); stash1.setVisible(true); stash2.setVisible(true); stash3.setVisible(false); stash4.setVisible(false);
     		stash0.setText(stash.get(0).getName());
+    		stash0.setToolTipText("<html>Bonus XP: " + stash.get(0).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(0).getBonusChance()*100 + "%</html>");
     		stash1.setText(stash.get(1).getName());
+    		stash1.setToolTipText("<html>Bonus XP: " + stash.get(1).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(1).getBonusChance()*100 + "%</html>");
     		stash2.setText(stash.get(2).getName());
+    		stash2.setToolTipText("<html>Bonus XP: " + stash.get(2).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(2).getBonusChance()*100 + "%</html>");
     	}
     	else if(stash.size() == 4){
     		stash0.setVisible(true); stash1.setVisible(true); stash2.setVisible(true); stash3.setVisible(true); stash4.setVisible(false);
     		stash0.setText(stash.get(0).getName());
+    		stash0.setToolTipText("<html>Bonus XP: " + stash.get(0).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(0).getBonusChance()*100 + "%</html>");
     		stash1.setText(stash.get(1).getName());
+    		stash1.setToolTipText("<html>Bonus XP: " + stash.get(1).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(1).getBonusChance()*100 + "%</html>");
     		stash2.setText(stash.get(2).getName());
+    		stash2.setToolTipText("<html>Bonus XP: " + stash.get(2).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(2).getBonusChance()*100 + "%</html>");
     		stash3.setText(stash.get(3).getName());
+    		stash3.setToolTipText("<html>Bonus XP: " + stash.get(3).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(3).getBonusChance()*100 + "%</html>");
     	}
     	else if(stash.size() == 5){
     		stash0.setVisible(true); stash1.setVisible(true); stash2.setVisible(true); stash3.setVisible(true); stash4.setVisible(true);
     		stash0.setText(stash.get(0).getName());
+    		stash0.setToolTipText("<html>Bonus XP: " + stash.get(0).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(0).getBonusChance()*100 + "%</html>");
     		stash1.setText(stash.get(1).getName());
+    		stash1.setToolTipText("<html>Bonus XP: " + stash.get(1).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(1).getBonusChance()*100 + "%</html>");
     		stash2.setText(stash.get(2).getName());
+    		stash2.setToolTipText("<html>Bonus XP: " + stash.get(2).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(2).getBonusChance()*100 + "%</html>");
     		stash3.setText(stash.get(3).getName());
+    		stash3.setToolTipText("<html>Bonus XP: " + stash.get(3).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(3).getBonusChance()*100 + "%</html>");
     		stash4.setText(stash.get(4).getName());
+    		stash4.setToolTipText("<html>Bonus XP: " + stash.get(4).getBonusXP() + "<br>" + "Bonus %Chance: " + stash.get(4).getBonusChance()*100 + "%</html>");
     	}
     }
     
